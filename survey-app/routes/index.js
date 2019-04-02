@@ -1,9 +1,16 @@
 var express = require('express');
+var Web3 = require('web3');
 var router = express.Router();
 var MongoClient = require('mongodb').MongoClient;
 
 var url = "mongodb://localhost:27017/";
+// var web3 = new Web3.providers.HttpProvider('http://localhost:7545');
+var web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
 
+console.log("Getting eth accounts...");
+web3.eth.getAccounts(function(err, accounts){
+  console.log(accounts);
+});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

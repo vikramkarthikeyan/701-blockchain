@@ -11,7 +11,7 @@ var contractInstance = new web3.eth.Contract(contractArtifact.abi, config.contra
 module.exports = {
 
     // Get current nonce and sign transaction
-    signTransaction: function(abi) {
+    signTransaction: function(abi, callback) {
         web3.eth.getTransactionCount(config.primary_account).then(function(count){
             let tx = {
               gas: 1000000,
@@ -27,12 +27,19 @@ module.exports = {
             transaction.sign(privateKey);
           
             web3.eth.sendSignedTransaction('0x'+transaction.serialize().toString('hex'))
-                      .on('transactionHash',console.log);
+                      .on('transactionHash', function(hash){
+                          console.log("Txn executed");
+                          callback(200);
+                      })
+                      .on('error', function(err){
+                          console.log("Txn reverted/failed");
+                          callback(500);
+                      });
         });
     },
 
     // Wrappers for Smart Contract functions
-    
+
     getRegisterUserABI: function(personNumber, callback) {
         callback(contractInstance.methods.registerUser(personNumber).encodeABI());
     },
@@ -41,6 +48,10 @@ module.exports = {
         contractInstance.methods.getSurveyCount().call().then(function(count){
             callback(count);
         });
+    },
+
+    getSurveyEntryABI: function(personNumber, callback) {
+        callback(contractInstance.methods.addSurveyEntry(personNumber).encodeABI());
     }
 };
 

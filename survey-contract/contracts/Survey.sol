@@ -34,17 +34,20 @@ contract Survey {
  function getSurveyCount() view public returns(uint){
      return totalSurveysCollected;
  }
+  
+ function getPoints(uint user) view public registeredUser(user) returns(uint){
+     return users[user].balance;
+ }
  
  function addSurveyEntry(uint user) public registeredUser(user){
      users[user].balance += pointsPerSurvey;
      totalSurveysCollected += 1;
      emit allowEntry(user);
  }
- 
+
  function redeemPoints(uint user, uint points) public registeredUser(user) hasPoints(user, points){
      users[user].balance -= points;
      emit redeemedPoints(user);
-     
  }
  
 }

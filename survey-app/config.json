@@ -1,6 +1,7 @@
 {
-    "contract_address": "0x6DB93fC8A878Da9206fA411Fe3D74914B3dc9Cd6",
-    "private_key": "1cc57c04427bd0b7e2d87aa2a2594570ff387350daf542e7824ce4c47479ca05",
+    "contract_address": "0x462DcA71448E1A361574699D80468C69D366C688",
+    "private_key": "ec52f4ae7eddc3e4431fdcfe5df0bf23174b936872d319315af27b992fd782b8",
+    "primary_account": "0x2CcC44895b058a88e671C07b98e52f820561e5e6",
     "mongo_endpoint": "mongodb://localhost:27017/",
     "blockchain_endpoint": "http://localhost:7545"
 

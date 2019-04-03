@@ -11,37 +11,41 @@ contract Survey {
      bool active;
  }
  
- mapping (address => User) public users;
+ mapping (string => User) public users;
  
  constructor() public {
      totalSurveysCollected = 0;
      pointsPerSurvey = 10;
  }
  
- event allowEntry(address user);
+ event allowEntry(string user);
  event userRegistered(string name);
- event redeemedPoints(address user);
+ event redeemedPoints(string user);
  
- modifier newUser(address user) { require(users[user].active == false); _; }
- modifier registeredUser(address user) {  require(users[user].active == true); _; }
- modifier hasPoints(address user, uint points) {    require(users[user].balance >= points); _;}
+ modifier newUser(string memory user) { require(users[user].active == false); _; }
+ modifier registeredUser(string memory user) {  require(users[user].active == true); _; }
+ modifier hasPoints(string memory user, uint points) {    require(users[user].balance >= points); _;}
  
- function registerUser(string memory name) public newUser(msg.sender){
-     users[msg.sender].name = name;
-     users[msg.sender].balance = 0;
-     users[msg.sender].active = true;
+ function registerUser(string memory name) public newUser(name){
+     users[name].name = name;
+     users[name].balance = 0;
+     users[name].active = true;
      emit userRegistered(name);
  }
- 
- function addSurveyEntry() public registeredUser(msg.sender){
-     users[msg.sender].balance += pointsPerSurvey;
-     totalSurveysCollected += 1;
-     emit allowEntry(msg.sender);
+
+ function getSurveyCount() view public returns(uint){
+     return totalSurveysCollected;
  }
  
- function redeemPoints(uint points) public registeredUser(msg.sender) hasPoints(msg.sender, points){
-     users[msg.sender].balance -= points;
-     emit redeemedPoints(msg.sender);
+ function addSurveyEntry(string memory name) public registeredUser(name){
+     users[name].balance += pointsPerSurvey;
+     totalSurveysCollected += 1;
+     emit allowEntry(name);
+ }
+ 
+ function redeemPoints(string memory name, uint points) public registeredUser(name) hasPoints(name, points){
+     users[name].balance -= points;
+     emit redeemedPoints(name);
      
  }
  

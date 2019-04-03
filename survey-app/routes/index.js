@@ -4,7 +4,6 @@ var router = express.Router();
 var MongoClient = require('mongodb').MongoClient;
 
 var url = "mongodb://localhost:27017/";
-// var web3 = new Web3.providers.HttpProvider('http://localhost:7545');
 var web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
 
 console.log("Getting eth accounts...");
@@ -12,9 +11,24 @@ web3.eth.getAccounts(function(err, accounts){
   console.log(accounts);
 });
 
+// Setup contract instance
+var contractArtifact = require('../../survey-contract/build/contracts/Survey.json');
+var contractInstance = new web3.eth.Contract(contractArtifact.abi, '0x1fC7F28CA040B78ae9c2ef2aA6fD7Fc3382943F9');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
+});
+
+router.post('/updateSurveyContract', function(req, res, next){
+  console.log(req.body);
+
+  contractInstance.methods.getSurveyCount(function(req,res){
+    console.log("res");
+    console.log(res);
+  });
+  res.sendStatus(200);
+
 });
 
 router.post('/addEntry', function(req, res, next){

@@ -132,6 +132,26 @@
       "signature": "0x9fe140b1"
     },
     {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "user",
+          "type": "uint256"
+        }
+      ],
+      "name": "getPoints",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0xa967eee4"
+    },
+    {
       "constant": false,
       "inputs": [
         {
@@ -166,20 +186,20 @@
       "signature": "0xc2e70431"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b5060008081905550600a6001819055506104b58061002f6000396000f3fe608060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631818bb4f146100885780631bbfae0e146100b3578063365b98b2146100ee57806378dbd544146101485780638017883d146101835780639fe140b1146101ae578063c2e70431146101d9575b600080fd5b34801561009457600080fd5b5061009d61021e565b6040518082815260200191505060405180910390f35b3480156100bf57600080fd5b506100ec600480360360208110156100d657600080fd5b8101908080359060200190929190505050610224565b005b3480156100fa57600080fd5b506101276004803603602081101561011157600080fd5b81019080803590602001909291905050506102e1565b60405180838152602001821515151581526020019250505060405180910390f35b34801561015457600080fd5b506101816004803603602081101561016b57600080fd5b8101908080359060200190929190505050610312565b005b34801561018f57600080fd5b506101986103ba565b6040518082815260200191505060405180910390f35b3480156101ba57600080fd5b506101c36103c0565b6040518082815260200191505060405180910390f35b3480156101e557600080fd5b5061021c600480360360408110156101fc57600080fd5b8101908080359060200190929190803590602001909291905050506103c9565b005b60005481565b80600015156002600083815260200190815260200160002060010160009054906101000a900460ff16151514151561025b57600080fd5b6000600260008481526020019081526020016000206000018190555060016002600084815260200190815260200160002060010160006101000a81548160ff0219169083151502179055507f6b7a42e3768fc24ff05fc49e251816434f842a132416160282a290142dbdefd2826040518082815260200191505060405180910390a15050565b60026020528060005260406000206000915090508060000154908060010160009054906101000a900460ff16905082565b80600115156002600083815260200190815260200160002060010160009054906101000a900460ff16151514151561034957600080fd5b6001546002600084815260200190815260200160002060000160008282540192505081905550600160008082825401925050819055507f4f42592042843ab3ecb68469cf6ba9a4cf6fe8d2df5dd3d080eb8993cb4d655d826040518082815260200191505060405180910390a15050565b60015481565b60008054905090565b81600115156002600083815260200190815260200160002060010160009054906101000a900460ff16151514151561040057600080fd5b82828060026000848152602001908152602001600020600001541015151561042757600080fd5b8360026000878152602001908152602001600020600001600082825403925050819055507fa246c37b0a9df7d1776fb25c009cdb31560b9aa4d14a010f2b0ea345318ff755856040518082815260200191505060405180910390a1505050505056fea165627a7a723058204f258d89de8359104a3b6620be8c401f5384c1a745f929a218a75f830ffe68180029",
-  "deployedBytecode": "0x608060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631818bb4f146100885780631bbfae0e146100b3578063365b98b2146100ee57806378dbd544146101485780638017883d146101835780639fe140b1146101ae578063c2e70431146101d9575b600080fd5b34801561009457600080fd5b5061009d61021e565b6040518082815260200191505060405180910390f35b3480156100bf57600080fd5b506100ec600480360360208110156100d657600080fd5b8101908080359060200190929190505050610224565b005b3480156100fa57600080fd5b506101276004803603602081101561011157600080fd5b81019080803590602001909291905050506102e1565b60405180838152602001821515151581526020019250505060405180910390f35b34801561015457600080fd5b506101816004803603602081101561016b57600080fd5b8101908080359060200190929190505050610312565b005b34801561018f57600080fd5b506101986103ba565b6040518082815260200191505060405180910390f35b3480156101ba57600080fd5b506101c36103c0565b6040518082815260200191505060405180910390f35b3480156101e557600080fd5b5061021c600480360360408110156101fc57600080fd5b8101908080359060200190929190803590602001909291905050506103c9565b005b60005481565b80600015156002600083815260200190815260200160002060010160009054906101000a900460ff16151514151561025b57600080fd5b6000600260008481526020019081526020016000206000018190555060016002600084815260200190815260200160002060010160006101000a81548160ff0219169083151502179055507f6b7a42e3768fc24ff05fc49e251816434f842a132416160282a290142dbdefd2826040518082815260200191505060405180910390a15050565b60026020528060005260406000206000915090508060000154908060010160009054906101000a900460ff16905082565b80600115156002600083815260200190815260200160002060010160009054906101000a900460ff16151514151561034957600080fd5b6001546002600084815260200190815260200160002060000160008282540192505081905550600160008082825401925050819055507f4f42592042843ab3ecb68469cf6ba9a4cf6fe8d2df5dd3d080eb8993cb4d655d826040518082815260200191505060405180910390a15050565b60015481565b60008054905090565b81600115156002600083815260200190815260200160002060010160009054906101000a900460ff16151514151561040057600080fd5b82828060026000848152602001908152602001600020600001541015151561042757600080fd5b8360026000878152602001908152602001600020600001600082825403925050819055507fa246c37b0a9df7d1776fb25c009cdb31560b9aa4d14a010f2b0ea345318ff755856040518082815260200191505060405180910390a1505050505056fea165627a7a723058204f258d89de8359104a3b6620be8c401f5384c1a745f929a218a75f830ffe68180029",
-  "sourceMap": "25:1227:1:-;;;211:84;8:9:-1;5:2;;;30:1;27;20:12;5:2;211:84:1;263:1;239:21;:25;;;;289:2;271:15;:20;;;;25:1227;;;;;;",
-  "deployedSourceMap": "25:1227:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;46:33;;8:9:-1;5:2;;;30:1;27;20:12;5:2;46:33:1;;;;;;;;;;;;;;;;;;;;;;;649:151;;8:9:-1;5:2;;;30:1;27;20:12;5:2;649:151:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;649:151:1;;;;;;;;;;;;;;;;;;;;171:35;;8:9:-1;5:2;;;30:1;27;20:12;5:2;171:35:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;171:35:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;897:172;;8:9:-1;5:2;;;30:1;27;20:12;5:2;897:172:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;897:172:1;;;;;;;;;;;;;;;;;;;;82:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;82:27:1;;;;;;;;;;;;;;;;;;;;;;;803:90;;8:9:-1;5:2;;;30:1;27;20:12;5:2;803:90:1;;;;;;;;;;;;;;;;;;;;;;;1073:175;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1073:175:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1073:175:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;46:33;;;;:::o;649:151::-;697:4;459:5;437:27;;:5;:11;443:4;437:11;;;;;;;;;;;:18;;;;;;;;;;;;:27;;;429:36;;;;;;;;731:1;709:5;:11;715:4;709:11;;;;;;;;;;;:19;;:23;;;;760:4;739:5;:11;745:4;739:11;;;;;;;;;;;:18;;;:25;;;;;;;;;;;;;;;;;;776:20;791:4;776:20;;;;;;;;;;;;;;;;;;649:151;;:::o;171:35::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;897:172::-;954:4;541;519:26;;:5;:11;525:4;519:11;;;;;;;;;;;:18;;;;;;;;;;;;:26;;;511:35;;;;;;;;989:15;;966:5;:11;972:4;966:11;;;;;;;;;;;:19;;;:38;;;;;;;;;;;1036:1;1011:21;;:26;;;;;;;;;;;1049:16;1060:4;1049:16;;;;;;;;;;;;;;;;;;897:172;;:::o;82:27::-;;;;:::o;803:90::-;849:4;868:21;;861:28;;803:90;:::o;1073:175::-;1141:4;541;519:26;;:5;:11;525:4;519:11;;;;;;;;;;;:18;;;;;;;;;;;;:26;;;511:35;;;;;;;;1157:4;1163:6;633;610:5;:11;616:4;610:11;;;;;;;;;;;:19;;;:29;;602:38;;;;;;;;1200:6;1177:5;:11;1183:4;1177:11;;;;;;;;;;;:19;;;:29;;;;;;;;;;;1218:20;1233:4;1218:20;;;;;;;;;;;;;;;;;;548:1;;1073:175;;;:::o",
-  "source": "pragma solidity ^0.5.0;\n\ncontract Survey {\n \n uint public totalSurveysCollected;\n uint public pointsPerSurvey;\n \n struct User {\n     uint balance;\n     bool active;\n }\n \n mapping (uint => User) public users;\n \n constructor() public {\n     totalSurveysCollected = 0;\n     pointsPerSurvey = 10;\n }\n \n event allowEntry(uint user);\n event userRegistered(uint name);\n event redeemedPoints(uint user);\n \n modifier newUser(uint user) { require(users[user].active == false); _; }\n modifier registeredUser(uint user) {  require(users[user].active == true); _; }\n modifier hasPoints(uint user, uint points) {    require(users[user].balance >= points); _;}\n \n function registerUser(uint user) public newUser(user){\n     users[user].balance = 0;\n     users[user].active = true;\n     emit userRegistered(user);\n }\n\n function getSurveyCount() view public returns(uint){\n     return totalSurveysCollected;\n }\n \n function addSurveyEntry(uint user) public registeredUser(user){\n     users[user].balance += pointsPerSurvey;\n     totalSurveysCollected += 1;\n     emit allowEntry(user);\n }\n \n function redeemPoints(uint user, uint points) public registeredUser(user) hasPoints(user, points){\n     users[user].balance -= points;\n     emit redeemedPoints(user);\n     \n }\n \n}\n",
+  "bytecode": "0x608060405234801561001057600080fd5b5060008081905550600a6001819055506105618061002f6000396000f3fe608060405260043610610088576000357c0100000000000000000000000000000000000000000000000000000000900480631818bb4f1461008d5780631bbfae0e146100b8578063365b98b2146100f357806378dbd5441461014d5780638017883d146101885780639fe140b1146101b3578063a967eee4146101de578063c2e704311461022d575b600080fd5b34801561009957600080fd5b506100a2610272565b6040518082815260200191505060405180910390f35b3480156100c457600080fd5b506100f1600480360360208110156100db57600080fd5b8101908080359060200190929190505050610278565b005b3480156100ff57600080fd5b5061012c6004803603602081101561011657600080fd5b8101908080359060200190929190505050610335565b60405180838152602001821515151581526020019250505060405180910390f35b34801561015957600080fd5b506101866004803603602081101561017057600080fd5b8101908080359060200190929190505050610366565b005b34801561019457600080fd5b5061019d61040e565b6040518082815260200191505060405180910390f35b3480156101bf57600080fd5b506101c8610414565b6040518082815260200191505060405180910390f35b3480156101ea57600080fd5b506102176004803603602081101561020157600080fd5b810190808035906020019092919050505061041d565b6040518082815260200191505060405180910390f35b34801561023957600080fd5b506102706004803603604081101561025057600080fd5b810190808035906020019092919080359060200190929190505050610475565b005b60005481565b80600015156002600083815260200190815260200160002060010160009054906101000a900460ff1615151415156102af57600080fd5b6000600260008481526020019081526020016000206000018190555060016002600084815260200190815260200160002060010160006101000a81548160ff0219169083151502179055507f6b7a42e3768fc24ff05fc49e251816434f842a132416160282a290142dbdefd2826040518082815260200191505060405180910390a15050565b60026020528060005260406000206000915090508060000154908060010160009054906101000a900460ff16905082565b80600115156002600083815260200190815260200160002060010160009054906101000a900460ff16151514151561039d57600080fd5b6001546002600084815260200190815260200160002060000160008282540192505081905550600160008082825401925050819055507f4f42592042843ab3ecb68469cf6ba9a4cf6fe8d2df5dd3d080eb8993cb4d655d826040518082815260200191505060405180910390a15050565b60015481565b60008054905090565b600081600115156002600083815260200190815260200160002060010160009054906101000a900460ff16151514151561045657600080fd5b6002600084815260200190815260200160002060000154915050919050565b81600115156002600083815260200190815260200160002060010160009054906101000a900460ff1615151415156104ac57600080fd5b8282806002600084815260200190815260200160002060000154101515156104d357600080fd5b8360026000878152602001908152602001600020600001600082825403925050819055507fa246c37b0a9df7d1776fb25c009cdb31560b9aa4d14a010f2b0ea345318ff755856040518082815260200191505060405180910390a1505050505056fea165627a7a72305820fcbd31a32c6b463b2a2e06061c097d21207fd45227c51d0020d4cfdc0899e20d0029",
+  "deployedBytecode": "0x608060405260043610610088576000357c0100000000000000000000000000000000000000000000000000000000900480631818bb4f1461008d5780631bbfae0e146100b8578063365b98b2146100f357806378dbd5441461014d5780638017883d146101885780639fe140b1146101b3578063a967eee4146101de578063c2e704311461022d575b600080fd5b34801561009957600080fd5b506100a2610272565b6040518082815260200191505060405180910390f35b3480156100c457600080fd5b506100f1600480360360208110156100db57600080fd5b8101908080359060200190929190505050610278565b005b3480156100ff57600080fd5b5061012c6004803603602081101561011657600080fd5b8101908080359060200190929190505050610335565b60405180838152602001821515151581526020019250505060405180910390f35b34801561015957600080fd5b506101866004803603602081101561017057600080fd5b8101908080359060200190929190505050610366565b005b34801561019457600080fd5b5061019d61040e565b6040518082815260200191505060405180910390f35b3480156101bf57600080fd5b506101c8610414565b6040518082815260200191505060405180910390f35b3480156101ea57600080fd5b506102176004803603602081101561020157600080fd5b810190808035906020019092919050505061041d565b6040518082815260200191505060405180910390f35b34801561023957600080fd5b506102706004803603604081101561025057600080fd5b810190808035906020019092919080359060200190929190505050610475565b005b60005481565b80600015156002600083815260200190815260200160002060010160009054906101000a900460ff1615151415156102af57600080fd5b6000600260008481526020019081526020016000206000018190555060016002600084815260200190815260200160002060010160006101000a81548160ff0219169083151502179055507f6b7a42e3768fc24ff05fc49e251816434f842a132416160282a290142dbdefd2826040518082815260200191505060405180910390a15050565b60026020528060005260406000206000915090508060000154908060010160009054906101000a900460ff16905082565b80600115156002600083815260200190815260200160002060010160009054906101000a900460ff16151514151561039d57600080fd5b6001546002600084815260200190815260200160002060000160008282540192505081905550600160008082825401925050819055507f4f42592042843ab3ecb68469cf6ba9a4cf6fe8d2df5dd3d080eb8993cb4d655d826040518082815260200191505060405180910390a15050565b60015481565b60008054905090565b600081600115156002600083815260200190815260200160002060010160009054906101000a900460ff16151514151561045657600080fd5b6002600084815260200190815260200160002060000154915050919050565b81600115156002600083815260200190815260200160002060010160009054906101000a900460ff1615151415156104ac57600080fd5b8282806002600084815260200190815260200160002060000154101515156104d357600080fd5b8360026000878152602001908152602001600020600001600082825403925050819055507fa246c37b0a9df7d1776fb25c009cdb31560b9aa4d14a010f2b0ea345318ff755856040518082815260200191505060405180910390a1505050505056fea165627a7a72305820fcbd31a32c6b463b2a2e06061c097d21207fd45227c51d0020d4cfdc0899e20d0029",
+  "sourceMap": "25:1338:1:-;;;211:84;8:9:-1;5:2;;;30:1;27;20:12;5:2;211:84:1;263:1;239:21;:25;;;;289:2;271:15;:20;;;;25:1338;;;;;;",
+  "deployedSourceMap": "25:1338:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;46:33;;8:9:-1;5:2;;;30:1;27;20:12;5:2;46:33:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;649:151;;8:9:-1;5:2;;;30:1;27;20:12;5:2;649:151:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;649:151:1;;;;;;;;;;;;;;;;;:::i;:::-;;171:35;;8:9:-1;5:2;;;30:1;27;20:12;5:2;171:35:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;171:35:1;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1015:172;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1015:172:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1015:172:1;;;;;;;;;;;;;;;;;:::i;:::-;;82:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;82:27:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;803:90;;8:9:-1;5:2;;;30:1;27;20:12;5:2;803:90:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;898:113;;8:9:-1;5:2;;;30:1;27;20:12;5:2;898:113:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;898:113:1;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1190:169;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1190:169:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1190:169:1;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;46:33;;;;:::o;649:151::-;697:4;459:5;437:27;;:5;:11;443:4;437:11;;;;;;;;;;;:18;;;;;;;;;;;;:27;;;429:36;;;;;;;;731:1;709:5;:11;715:4;709:11;;;;;;;;;;;:19;;:23;;;;760:4;739:5;:11;745:4;739:11;;;;;;;;;;;:18;;;:25;;;;;;;;;;;;;;;;;;776:20;791:4;776:20;;;;;;;;;;;;;;;;;;649:151;;:::o;171:35::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1015:172::-;1072:4;541;519:26;;:5;:11;525:4;519:11;;;;;;;;;;;:18;;;;;;;;;;;;:26;;;511:35;;;;;;;;1107:15;;1084:5;:11;1090:4;1084:11;;;;;;;;;;;:19;;;:38;;;;;;;;;;;1154:1;1129:21;;:26;;;;;;;;;;;1167:16;1178:4;1167:16;;;;;;;;;;;;;;;;;;1015:172;;:::o;82:27::-;;;;:::o;803:90::-;849:4;868:21;;861:28;;803:90;:::o;898:113::-;969:4;955;541;519:26;;:5;:11;525:4;519:11;;;;;;;;;;;:18;;;;;;;;;;;;:26;;;511:35;;;;;;;;988:5;:11;994:4;988:11;;;;;;;;;;;:19;;;981:26;;898:113;;;;:::o;1190:169::-;1258:4;541;519:26;;:5;:11;525:4;519:11;;;;;;;;;;;:18;;;;;;;;;;;;:26;;;511:35;;;;;;;;1274:4;1280:6;633;610:5;:11;616:4;610:11;;;;;;;;;;;:19;;;:29;;602:38;;;;;;;;1317:6;1294:5;:11;1300:4;1294:11;;;;;;;;;;;:19;;;:29;;;;;;;;;;;1335:20;1350:4;1335:20;;;;;;;;;;;;;;;;;;548:1;;1190:169;;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\ncontract Survey {\n \n uint public totalSurveysCollected;\n uint public pointsPerSurvey;\n \n struct User {\n     uint balance;\n     bool active;\n }\n \n mapping (uint => User) public users;\n \n constructor() public {\n     totalSurveysCollected = 0;\n     pointsPerSurvey = 10;\n }\n \n event allowEntry(uint user);\n event userRegistered(uint name);\n event redeemedPoints(uint user);\n \n modifier newUser(uint user) { require(users[user].active == false); _; }\n modifier registeredUser(uint user) {  require(users[user].active == true); _; }\n modifier hasPoints(uint user, uint points) {    require(users[user].balance >= points); _;}\n \n function registerUser(uint user) public newUser(user){\n     users[user].balance = 0;\n     users[user].active = true;\n     emit userRegistered(user);\n }\n\n function getSurveyCount() view public returns(uint){\n     return totalSurveysCollected;\n }\n  \n function getPoints(uint user) view public registeredUser(user) returns(uint){\n     return users[user].balance;\n }\n \n function addSurveyEntry(uint user) public registeredUser(user){\n     users[user].balance += pointsPerSurvey;\n     totalSurveysCollected += 1;\n     emit allowEntry(user);\n }\n\n function redeemPoints(uint user, uint points) public registeredUser(user) hasPoints(user, points){\n     users[user].balance -= points;\n     emit redeemedPoints(user);\n }\n \n}",
   "sourcePath": "/Users/vikramkarthikeyan/Documents/701/701-blockchain/survey-contract/contracts/Survey.sol",
   "ast": {
     "absolutePath": "/Users/vikramkarthikeyan/Documents/701/701-blockchain/survey-contract/contracts/Survey.sol",
     "exportedSymbols": {
       "Survey": [
-        228
+        244
       ]
     },
-    "id": 229,
+    "id": 245,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -199,9 +219,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 228,
+        "id": 244,
         "linearizedBaseContracts": [
-          228
+          244
         ],
         "name": "Survey",
         "nodeType": "ContractDefinition",
@@ -211,7 +231,7 @@
             "id": 60,
             "name": "totalSurveysCollected",
             "nodeType": "VariableDeclaration",
-            "scope": 228,
+            "scope": 244,
             "src": "46:33:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -237,7 +257,7 @@
             "id": 62,
             "name": "pointsPerSurvey",
             "nodeType": "VariableDeclaration",
-            "scope": 228,
+            "scope": 244,
             "src": "82:27:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -317,7 +337,7 @@
             ],
             "name": "User",
             "nodeType": "StructDefinition",
-            "scope": 228,
+            "scope": 244,
             "src": "114:53:1",
             "visibility": "public"
           },
@@ -326,7 +346,7 @@
             "id": 71,
             "name": "users",
             "nodeType": "VariableDeclaration",
-            "scope": 228,
+            "scope": 244,
             "src": "171:35:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -497,7 +517,7 @@
               "parameters": [],
               "src": "232:0:1"
             },
-            "scope": 228,
+            "scope": 244,
             "src": "211:84:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -744,10 +764,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        246,
-                        247
+                        262,
+                        263
                       ],
-                      "referencedDeclaration": 246,
+                      "referencedDeclaration": 262,
                       "src": "429:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -934,10 +954,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        246,
-                        247
+                        262,
+                        263
                       ],
-                      "referencedDeclaration": 246,
+                      "referencedDeclaration": 262,
                       "src": "511:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1119,10 +1139,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        246,
-                        247
+                        262,
+                        263
                       ],
-                      "referencedDeclaration": 246,
+                      "referencedDeclaration": 262,
                       "src": "602:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1550,7 +1570,7 @@
               "parameters": [],
               "src": "702:0:1"
             },
-            "scope": 228,
+            "scope": 244,
             "src": "649:151:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1629,7 +1649,7 @@
               ],
               "src": "848:6:1"
             },
-            "scope": 228,
+            "scope": 244,
             "src": "803:90:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -1637,208 +1657,76 @@
           },
           {
             "body": {
-              "id": 200,
+              "id": 192,
               "nodeType": "Block",
-              "src": "959:110:1",
+              "src": "974:37:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 190,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
+                    "expression": {
                       "argumentTypes": null,
-                      "expression": {
+                      "baseExpression": {
                         "argumentTypes": null,
-                        "baseExpression": {
-                          "argumentTypes": null,
-                          "id": 185,
-                          "name": "users",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 71,
-                          "src": "966:5:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$67_storage_$",
-                            "typeString": "mapping(uint256 => struct Survey.User storage ref)"
-                          }
-                        },
                         "id": 187,
-                        "indexExpression": {
-                          "argumentTypes": null,
-                          "id": 186,
-                          "name": "user",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 179,
-                          "src": "972:4:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        "isConstant": false,
-                        "isLValue": true,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "nodeType": "IndexAccess",
-                        "src": "966:11:1",
+                        "name": "users",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 71,
+                        "src": "988:5:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_User_$67_storage",
-                          "typeString": "struct Survey.User storage ref"
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$67_storage_$",
+                          "typeString": "mapping(uint256 => struct Survey.User storage ref)"
                         }
                       },
-                      "id": 188,
-                      "isConstant": false,
-                      "isLValue": true,
-                      "isPure": false,
-                      "lValueRequested": true,
-                      "memberName": "balance",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": 64,
-                      "src": "966:19:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "+=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
                       "id": 189,
-                      "name": "pointsPerSurvey",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 62,
-                      "src": "989:15:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "src": "966:38:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 191,
-                  "nodeType": "ExpressionStatement",
-                  "src": "966:38:1"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 194,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 192,
-                      "name": "totalSurveysCollected",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 60,
-                      "src": "1011:21:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "+=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "hexValue": "31",
-                      "id": 193,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "kind": "number",
-                      "lValueRequested": false,
-                      "nodeType": "Literal",
-                      "src": "1036:1:1",
-                      "subdenomination": null,
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_rational_1_by_1",
-                        "typeString": "int_const 1"
-                      },
-                      "value": "1"
-                    },
-                    "src": "1011:26:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 195,
-                  "nodeType": "ExpressionStatement",
-                  "src": "1011:26:1"
-                },
-                {
-                  "eventCall": {
-                    "argumentTypes": null,
-                    "arguments": [
-                      {
+                      "indexExpression": {
                         "argumentTypes": null,
-                        "id": 197,
+                        "id": 188,
                         "name": "user",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 179,
-                        "src": "1060:4:1",
+                        "src": "994:4:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      ],
-                      "id": 196,
-                      "name": "allowEntry",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 87,
-                      "src": "1049:10:1",
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "988:11:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
-                        "typeString": "function (uint256)"
+                        "typeIdentifier": "t_struct$_User_$67_storage",
+                        "typeString": "struct Survey.User storage ref"
                       }
                     },
-                    "id": 198,
+                    "id": 190,
                     "isConstant": false,
-                    "isLValue": false,
+                    "isLValue": true,
                     "isPure": false,
-                    "kind": "functionCall",
                     "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "1049:16:1",
+                    "memberName": "balance",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 64,
+                    "src": "988:19:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
                     }
                   },
-                  "id": 199,
-                  "nodeType": "EmitStatement",
-                  "src": "1044:21:1"
+                  "functionReturnParameters": 186,
+                  "id": 191,
+                  "nodeType": "Return",
+                  "src": "981:26:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 201,
+            "id": 193,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -1851,7 +1739,7 @@
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
                     "referencedDeclaration": 179,
-                    "src": "954:4:1",
+                    "src": "955:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1866,17 +1754,17 @@
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
                   "referencedDeclaration": 125,
-                  "src": "939:14:1",
+                  "src": "940:14:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_uint256_$",
                     "typeString": "modifier (uint256)"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "939:20:1"
+                "src": "940:20:1"
               }
             ],
-            "name": "addSurveyEntry",
+            "name": "getPoints",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 180,
@@ -1887,8 +1775,8 @@
                   "id": 179,
                   "name": "user",
                   "nodeType": "VariableDeclaration",
-                  "scope": 201,
-                  "src": "921:9:1",
+                  "scope": 193,
+                  "src": "917:9:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1899,7 +1787,7 @@
                     "id": 178,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "921:4:1",
+                    "src": "917:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1909,30 +1797,57 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "920:11:1"
+              "src": "916:11:1"
             },
             "returnParameters": {
-              "id": 184,
+              "id": 186,
               "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "959:0:1"
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 185,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 193,
+                  "src": "969:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 184,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "969:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "968:6:1"
             },
-            "scope": 228,
-            "src": "897:172:1",
-            "stateMutability": "nonpayable",
+            "scope": 244,
+            "src": "898:113:1",
+            "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 226,
+              "id": 216,
               "nodeType": "Block",
-              "src": "1170:78:1",
+              "src": "1077:110:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 220,
+                    "id": 206,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1943,26 +1858,26 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 215,
+                          "id": 201,
                           "name": "users",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 71,
-                          "src": "1177:5:1",
+                          "src": "1084:5:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$67_storage_$",
                             "typeString": "mapping(uint256 => struct Survey.User storage ref)"
                           }
                         },
-                        "id": 217,
+                        "id": 203,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 216,
+                          "id": 202,
                           "name": "user",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 203,
-                          "src": "1183:4:1",
+                          "referencedDeclaration": 195,
+                          "src": "1090:4:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -1973,13 +1888,13 @@
                         "isPure": false,
                         "lValueRequested": false,
                         "nodeType": "IndexAccess",
-                        "src": "1177:11:1",
+                        "src": "1084:11:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_User_$67_storage",
                           "typeString": "struct Survey.User storage ref"
                         }
                       },
-                      "id": 218,
+                      "id": 204,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -1987,36 +1902,87 @@
                       "memberName": "balance",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 64,
-                      "src": "1177:19:1",
+                      "src": "1084:19:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
                     "nodeType": "Assignment",
-                    "operator": "-=",
+                    "operator": "+=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 219,
-                      "name": "points",
+                      "id": 205,
+                      "name": "pointsPerSurvey",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 205,
-                      "src": "1200:6:1",
+                      "referencedDeclaration": 62,
+                      "src": "1107:15:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "1177:29:1",
+                    "src": "1084:38:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 221,
+                  "id": 207,
                   "nodeType": "ExpressionStatement",
-                  "src": "1177:29:1"
+                  "src": "1084:38:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 210,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 208,
+                      "name": "totalSurveysCollected",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 60,
+                      "src": "1129:21:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 209,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1154:1:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "1129:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 211,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1129:26:1"
                 },
                 {
                   "eventCall": {
@@ -2024,12 +1990,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 223,
+                        "id": 213,
                         "name": "user",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 203,
-                        "src": "1233:4:1",
+                        "referencedDeclaration": 195,
+                        "src": "1178:4:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -2043,18 +2009,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 222,
-                      "name": "redeemedPoints",
+                      "id": 212,
+                      "name": "allowEntry",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 95,
-                      "src": "1218:14:1",
+                      "referencedDeclaration": 87,
+                      "src": "1167:10:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 224,
+                    "id": 214,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2062,20 +2028,20 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1218:20:1",
+                    "src": "1167:16:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 225,
+                  "id": 215,
                   "nodeType": "EmitStatement",
-                  "src": "1213:25:1"
+                  "src": "1162:21:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 227,
+            "id": 217,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -2083,95 +2049,49 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 208,
+                    "id": 198,
                     "name": "user",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 203,
-                    "src": "1141:4:1",
+                    "referencedDeclaration": 195,
+                    "src": "1072:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   }
                 ],
-                "id": 209,
+                "id": 199,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 207,
+                  "id": 197,
                   "name": "registeredUser",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
                   "referencedDeclaration": 125,
-                  "src": "1126:14:1",
+                  "src": "1057:14:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_uint256_$",
                     "typeString": "modifier (uint256)"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1126:20:1"
-              },
-              {
-                "arguments": [
-                  {
-                    "argumentTypes": null,
-                    "id": 211,
-                    "name": "user",
-                    "nodeType": "Identifier",
-                    "overloadedDeclarations": [],
-                    "referencedDeclaration": 203,
-                    "src": "1157:4:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  {
-                    "argumentTypes": null,
-                    "id": 212,
-                    "name": "points",
-                    "nodeType": "Identifier",
-                    "overloadedDeclarations": [],
-                    "referencedDeclaration": 205,
-                    "src": "1163:6:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  }
-                ],
-                "id": 213,
-                "modifierName": {
-                  "argumentTypes": null,
-                  "id": 210,
-                  "name": "hasPoints",
-                  "nodeType": "Identifier",
-                  "overloadedDeclarations": [],
-                  "referencedDeclaration": 142,
-                  "src": "1147:9:1",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$_t_uint256_$_t_uint256_$",
-                    "typeString": "modifier (uint256,uint256)"
-                  }
-                },
-                "nodeType": "ModifierInvocation",
-                "src": "1147:23:1"
+                "src": "1057:20:1"
               }
             ],
-            "name": "redeemPoints",
+            "name": "addSurveyEntry",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 206,
+              "id": 196,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 203,
+                  "id": 195,
                   "name": "user",
                   "nodeType": "VariableDeclaration",
-                  "scope": 227,
-                  "src": "1095:9:1",
+                  "scope": 217,
+                  "src": "1039:9:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2179,36 +2099,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 202,
+                    "id": 194,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1095:4:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 205,
-                  "name": "points",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 227,
-                  "src": "1106:11:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 204,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1106:4:1",
+                    "src": "1039:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2218,35 +2112,344 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1094:24:1"
+              "src": "1038:11:1"
             },
             "returnParameters": {
-              "id": 214,
+              "id": 200,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1170:0:1"
+              "src": "1077:0:1"
             },
-            "scope": 228,
-            "src": "1073:175:1",
+            "scope": 244,
+            "src": "1015:172:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 242,
+              "nodeType": "Block",
+              "src": "1287:72:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 236,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 231,
+                          "name": "users",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 71,
+                          "src": "1294:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$67_storage_$",
+                            "typeString": "mapping(uint256 => struct Survey.User storage ref)"
+                          }
+                        },
+                        "id": 233,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 232,
+                          "name": "user",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 219,
+                          "src": "1300:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1294:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_User_$67_storage",
+                          "typeString": "struct Survey.User storage ref"
+                        }
+                      },
+                      "id": 234,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "balance",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 64,
+                      "src": "1294:19:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "-=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 235,
+                      "name": "points",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 221,
+                      "src": "1317:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1294:29:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 237,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1294:29:1"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 239,
+                        "name": "user",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 219,
+                        "src": "1350:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 238,
+                      "name": "redeemedPoints",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 95,
+                      "src": "1335:14:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 240,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1335:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 241,
+                  "nodeType": "EmitStatement",
+                  "src": "1330:25:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 243,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 224,
+                    "name": "user",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 219,
+                    "src": "1258:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 225,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 223,
+                  "name": "registeredUser",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 125,
+                  "src": "1243:14:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_uint256_$",
+                    "typeString": "modifier (uint256)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1243:20:1"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 227,
+                    "name": "user",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 219,
+                    "src": "1274:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 228,
+                    "name": "points",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 221,
+                    "src": "1280:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 229,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 226,
+                  "name": "hasPoints",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 142,
+                  "src": "1264:9:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_uint256_$_t_uint256_$",
+                    "typeString": "modifier (uint256,uint256)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1264:23:1"
+              }
+            ],
+            "name": "redeemPoints",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 222,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 219,
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 243,
+                  "src": "1212:9:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 218,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1212:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 221,
+                  "name": "points",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 243,
+                  "src": "1223:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 220,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1223:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1211:24:1"
+            },
+            "returnParameters": {
+              "id": 230,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1287:0:1"
+            },
+            "scope": 244,
+            "src": "1190:169:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 229,
-        "src": "25:1227:1"
+        "scope": 245,
+        "src": "25:1338:1"
       }
     ],
-    "src": "0:1253:1"
+    "src": "0:1363:1"
   },
   "legacyAST": {
     "absolutePath": "/Users/vikramkarthikeyan/Documents/701/701-blockchain/survey-contract/contracts/Survey.sol",
     "exportedSymbols": {
       "Survey": [
-        228
+        244
       ]
     },
-    "id": 229,
+    "id": 245,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -2266,9 +2469,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 228,
+        "id": 244,
         "linearizedBaseContracts": [
-          228
+          244
         ],
         "name": "Survey",
         "nodeType": "ContractDefinition",
@@ -2278,7 +2481,7 @@
             "id": 60,
             "name": "totalSurveysCollected",
             "nodeType": "VariableDeclaration",
-            "scope": 228,
+            "scope": 244,
             "src": "46:33:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2304,7 +2507,7 @@
             "id": 62,
             "name": "pointsPerSurvey",
             "nodeType": "VariableDeclaration",
-            "scope": 228,
+            "scope": 244,
             "src": "82:27:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2384,7 +2587,7 @@
             ],
             "name": "User",
             "nodeType": "StructDefinition",
-            "scope": 228,
+            "scope": 244,
             "src": "114:53:1",
             "visibility": "public"
           },
@@ -2393,7 +2596,7 @@
             "id": 71,
             "name": "users",
             "nodeType": "VariableDeclaration",
-            "scope": 228,
+            "scope": 244,
             "src": "171:35:1",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2564,7 +2767,7 @@
               "parameters": [],
               "src": "232:0:1"
             },
-            "scope": 228,
+            "scope": 244,
             "src": "211:84:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2811,10 +3014,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        246,
-                        247
+                        262,
+                        263
                       ],
-                      "referencedDeclaration": 246,
+                      "referencedDeclaration": 262,
                       "src": "429:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3001,10 +3204,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        246,
-                        247
+                        262,
+                        263
                       ],
-                      "referencedDeclaration": 246,
+                      "referencedDeclaration": 262,
                       "src": "511:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3186,10 +3389,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        246,
-                        247
+                        262,
+                        263
                       ],
-                      "referencedDeclaration": 246,
+                      "referencedDeclaration": 262,
                       "src": "602:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3617,7 +3820,7 @@
               "parameters": [],
               "src": "702:0:1"
             },
-            "scope": 228,
+            "scope": 244,
             "src": "649:151:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3696,7 +3899,7 @@
               ],
               "src": "848:6:1"
             },
-            "scope": 228,
+            "scope": 244,
             "src": "803:90:1",
             "stateMutability": "view",
             "superFunction": null,
@@ -3704,208 +3907,76 @@
           },
           {
             "body": {
-              "id": 200,
+              "id": 192,
               "nodeType": "Block",
-              "src": "959:110:1",
+              "src": "974:37:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 190,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
+                    "expression": {
                       "argumentTypes": null,
-                      "expression": {
+                      "baseExpression": {
                         "argumentTypes": null,
-                        "baseExpression": {
-                          "argumentTypes": null,
-                          "id": 185,
-                          "name": "users",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 71,
-                          "src": "966:5:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$67_storage_$",
-                            "typeString": "mapping(uint256 => struct Survey.User storage ref)"
-                          }
-                        },
                         "id": 187,
-                        "indexExpression": {
-                          "argumentTypes": null,
-                          "id": 186,
-                          "name": "user",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 179,
-                          "src": "972:4:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        "isConstant": false,
-                        "isLValue": true,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "nodeType": "IndexAccess",
-                        "src": "966:11:1",
+                        "name": "users",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 71,
+                        "src": "988:5:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_User_$67_storage",
-                          "typeString": "struct Survey.User storage ref"
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$67_storage_$",
+                          "typeString": "mapping(uint256 => struct Survey.User storage ref)"
                         }
                       },
-                      "id": 188,
-                      "isConstant": false,
-                      "isLValue": true,
-                      "isPure": false,
-                      "lValueRequested": true,
-                      "memberName": "balance",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": 64,
-                      "src": "966:19:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "+=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
                       "id": 189,
-                      "name": "pointsPerSurvey",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 62,
-                      "src": "989:15:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "src": "966:38:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 191,
-                  "nodeType": "ExpressionStatement",
-                  "src": "966:38:1"
-                },
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 194,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 192,
-                      "name": "totalSurveysCollected",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 60,
-                      "src": "1011:21:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "+=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "hexValue": "31",
-                      "id": 193,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "kind": "number",
-                      "lValueRequested": false,
-                      "nodeType": "Literal",
-                      "src": "1036:1:1",
-                      "subdenomination": null,
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_rational_1_by_1",
-                        "typeString": "int_const 1"
-                      },
-                      "value": "1"
-                    },
-                    "src": "1011:26:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "id": 195,
-                  "nodeType": "ExpressionStatement",
-                  "src": "1011:26:1"
-                },
-                {
-                  "eventCall": {
-                    "argumentTypes": null,
-                    "arguments": [
-                      {
+                      "indexExpression": {
                         "argumentTypes": null,
-                        "id": 197,
+                        "id": 188,
                         "name": "user",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 179,
-                        "src": "1060:4:1",
+                        "src": "994:4:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      ],
-                      "id": 196,
-                      "name": "allowEntry",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 87,
-                      "src": "1049:10:1",
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "988:11:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
-                        "typeString": "function (uint256)"
+                        "typeIdentifier": "t_struct$_User_$67_storage",
+                        "typeString": "struct Survey.User storage ref"
                       }
                     },
-                    "id": 198,
+                    "id": 190,
                     "isConstant": false,
-                    "isLValue": false,
+                    "isLValue": true,
                     "isPure": false,
-                    "kind": "functionCall",
                     "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "1049:16:1",
+                    "memberName": "balance",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 64,
+                    "src": "988:19:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
                     }
                   },
-                  "id": 199,
-                  "nodeType": "EmitStatement",
-                  "src": "1044:21:1"
+                  "functionReturnParameters": 186,
+                  "id": 191,
+                  "nodeType": "Return",
+                  "src": "981:26:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 201,
+            "id": 193,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -3918,7 +3989,7 @@
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
                     "referencedDeclaration": 179,
-                    "src": "954:4:1",
+                    "src": "955:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -3933,17 +4004,17 @@
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
                   "referencedDeclaration": 125,
-                  "src": "939:14:1",
+                  "src": "940:14:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_uint256_$",
                     "typeString": "modifier (uint256)"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "939:20:1"
+                "src": "940:20:1"
               }
             ],
-            "name": "addSurveyEntry",
+            "name": "getPoints",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 180,
@@ -3954,8 +4025,8 @@
                   "id": 179,
                   "name": "user",
                   "nodeType": "VariableDeclaration",
-                  "scope": 201,
-                  "src": "921:9:1",
+                  "scope": 193,
+                  "src": "917:9:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3966,7 +4037,7 @@
                     "id": 178,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "921:4:1",
+                    "src": "917:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -3976,30 +4047,57 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "920:11:1"
+              "src": "916:11:1"
             },
             "returnParameters": {
-              "id": 184,
+              "id": 186,
               "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "959:0:1"
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 185,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 193,
+                  "src": "969:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 184,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "969:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "968:6:1"
             },
-            "scope": 228,
-            "src": "897:172:1",
-            "stateMutability": "nonpayable",
+            "scope": 244,
+            "src": "898:113:1",
+            "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 226,
+              "id": 216,
               "nodeType": "Block",
-              "src": "1170:78:1",
+              "src": "1077:110:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 220,
+                    "id": 206,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4010,26 +4108,26 @@
                         "argumentTypes": null,
                         "baseExpression": {
                           "argumentTypes": null,
-                          "id": 215,
+                          "id": 201,
                           "name": "users",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 71,
-                          "src": "1177:5:1",
+                          "src": "1084:5:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$67_storage_$",
                             "typeString": "mapping(uint256 => struct Survey.User storage ref)"
                           }
                         },
-                        "id": 217,
+                        "id": 203,
                         "indexExpression": {
                           "argumentTypes": null,
-                          "id": 216,
+                          "id": 202,
                           "name": "user",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 203,
-                          "src": "1183:4:1",
+                          "referencedDeclaration": 195,
+                          "src": "1090:4:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -4040,13 +4138,13 @@
                         "isPure": false,
                         "lValueRequested": false,
                         "nodeType": "IndexAccess",
-                        "src": "1177:11:1",
+                        "src": "1084:11:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_User_$67_storage",
                           "typeString": "struct Survey.User storage ref"
                         }
                       },
-                      "id": 218,
+                      "id": 204,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
@@ -4054,36 +4152,87 @@
                       "memberName": "balance",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 64,
-                      "src": "1177:19:1",
+                      "src": "1084:19:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
                     "nodeType": "Assignment",
-                    "operator": "-=",
+                    "operator": "+=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 219,
-                      "name": "points",
+                      "id": 205,
+                      "name": "pointsPerSurvey",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 205,
-                      "src": "1200:6:1",
+                      "referencedDeclaration": 62,
+                      "src": "1107:15:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "1177:29:1",
+                    "src": "1084:38:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 221,
+                  "id": 207,
                   "nodeType": "ExpressionStatement",
-                  "src": "1177:29:1"
+                  "src": "1084:38:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 210,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 208,
+                      "name": "totalSurveysCollected",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 60,
+                      "src": "1129:21:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 209,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1154:1:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "1129:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 211,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1129:26:1"
                 },
                 {
                   "eventCall": {
@@ -4091,12 +4240,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 223,
+                        "id": 213,
                         "name": "user",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 203,
-                        "src": "1233:4:1",
+                        "referencedDeclaration": 195,
+                        "src": "1178:4:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -4110,18 +4259,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 222,
-                      "name": "redeemedPoints",
+                      "id": 212,
+                      "name": "allowEntry",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 95,
-                      "src": "1218:14:1",
+                      "referencedDeclaration": 87,
+                      "src": "1167:10:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
                         "typeString": "function (uint256)"
                       }
                     },
-                    "id": 224,
+                    "id": 214,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4129,20 +4278,20 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1218:20:1",
+                    "src": "1167:16:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 225,
+                  "id": 215,
                   "nodeType": "EmitStatement",
-                  "src": "1213:25:1"
+                  "src": "1162:21:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 227,
+            "id": 217,
             "implemented": true,
             "kind": "function",
             "modifiers": [
@@ -4150,95 +4299,49 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 208,
+                    "id": 198,
                     "name": "user",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 203,
-                    "src": "1141:4:1",
+                    "referencedDeclaration": 195,
+                    "src": "1072:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   }
                 ],
-                "id": 209,
+                "id": 199,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 207,
+                  "id": 197,
                   "name": "registeredUser",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
                   "referencedDeclaration": 125,
-                  "src": "1126:14:1",
+                  "src": "1057:14:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_uint256_$",
                     "typeString": "modifier (uint256)"
                   }
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "1126:20:1"
-              },
-              {
-                "arguments": [
-                  {
-                    "argumentTypes": null,
-                    "id": 211,
-                    "name": "user",
-                    "nodeType": "Identifier",
-                    "overloadedDeclarations": [],
-                    "referencedDeclaration": 203,
-                    "src": "1157:4:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  {
-                    "argumentTypes": null,
-                    "id": 212,
-                    "name": "points",
-                    "nodeType": "Identifier",
-                    "overloadedDeclarations": [],
-                    "referencedDeclaration": 205,
-                    "src": "1163:6:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  }
-                ],
-                "id": 213,
-                "modifierName": {
-                  "argumentTypes": null,
-                  "id": 210,
-                  "name": "hasPoints",
-                  "nodeType": "Identifier",
-                  "overloadedDeclarations": [],
-                  "referencedDeclaration": 142,
-                  "src": "1147:9:1",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_modifier$_t_uint256_$_t_uint256_$",
-                    "typeString": "modifier (uint256,uint256)"
-                  }
-                },
-                "nodeType": "ModifierInvocation",
-                "src": "1147:23:1"
+                "src": "1057:20:1"
               }
             ],
-            "name": "redeemPoints",
+            "name": "addSurveyEntry",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 206,
+              "id": 196,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 203,
+                  "id": 195,
                   "name": "user",
                   "nodeType": "VariableDeclaration",
-                  "scope": 227,
-                  "src": "1095:9:1",
+                  "scope": 217,
+                  "src": "1039:9:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4246,36 +4349,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 202,
+                    "id": 194,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1095:4:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 205,
-                  "name": "points",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 227,
-                  "src": "1106:11:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 204,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "1106:4:1",
+                    "src": "1039:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -4285,41 +4362,350 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1094:24:1"
+              "src": "1038:11:1"
             },
             "returnParameters": {
-              "id": 214,
+              "id": 200,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1170:0:1"
+              "src": "1077:0:1"
             },
-            "scope": 228,
-            "src": "1073:175:1",
+            "scope": 244,
+            "src": "1015:172:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 242,
+              "nodeType": "Block",
+              "src": "1287:72:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 236,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 231,
+                          "name": "users",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 71,
+                          "src": "1294:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$67_storage_$",
+                            "typeString": "mapping(uint256 => struct Survey.User storage ref)"
+                          }
+                        },
+                        "id": 233,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 232,
+                          "name": "user",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 219,
+                          "src": "1300:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1294:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_User_$67_storage",
+                          "typeString": "struct Survey.User storage ref"
+                        }
+                      },
+                      "id": 234,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "balance",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 64,
+                      "src": "1294:19:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "-=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 235,
+                      "name": "points",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 221,
+                      "src": "1317:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1294:29:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 237,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1294:29:1"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 239,
+                        "name": "user",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 219,
+                        "src": "1350:4:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 238,
+                      "name": "redeemedPoints",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 95,
+                      "src": "1335:14:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 240,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1335:20:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 241,
+                  "nodeType": "EmitStatement",
+                  "src": "1330:25:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 243,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 224,
+                    "name": "user",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 219,
+                    "src": "1258:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 225,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 223,
+                  "name": "registeredUser",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 125,
+                  "src": "1243:14:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_uint256_$",
+                    "typeString": "modifier (uint256)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1243:20:1"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 227,
+                    "name": "user",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 219,
+                    "src": "1274:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "argumentTypes": null,
+                    "id": 228,
+                    "name": "points",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 221,
+                    "src": "1280:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "id": 229,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 226,
+                  "name": "hasPoints",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 142,
+                  "src": "1264:9:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_uint256_$_t_uint256_$",
+                    "typeString": "modifier (uint256,uint256)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1264:23:1"
+              }
+            ],
+            "name": "redeemPoints",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 222,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 219,
+                  "name": "user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 243,
+                  "src": "1212:9:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 218,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1212:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 221,
+                  "name": "points",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 243,
+                  "src": "1223:11:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 220,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1223:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1211:24:1"
+            },
+            "returnParameters": {
+              "id": 230,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1287:0:1"
+            },
+            "scope": 244,
+            "src": "1190:169:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 229,
-        "src": "25:1227:1"
+        "scope": 245,
+        "src": "25:1338:1"
       }
     ],
-    "src": "0:1253:1"
+    "src": "0:1363:1"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+    "version": "0.5.1+commit.c8a2cb62.Emscripten.clang"
   },
   "networks": {
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x462DcA71448E1A361574699D80468C69D366C688",
-      "transactionHash": "0x291e714edd740e18e34a007efbdc70da123cf04a88144b8d9083455884a6cc4f"
+      "address": "0xc6851F91e895eBC6D6114387d18514D95aEbff96",
+      "transactionHash": "0x0b1ac85bbaaaf4ce5de75cef610127539926332db0c635202912a1729b018342"
     }
   },
   "schemaVersion": "3.0.1",
-  "updatedAt": "2019-04-03T20:50:45.605Z",
+  "updatedAt": "2019-04-03T22:09:06.278Z",
   "devdoc": {
     "methods": {}
   },

@@ -1,8 +1,8 @@
 var express = require('express');
-var config = require('../config.json');
-var router = express.Router();
 var mongo = require('../controllers/mongoWrapper');
 var blockchain = require('../controllers/blockchainWrapper');
+
+var router = express.Router();
 
 // Register User in both MongoDB and Blockchain
 function registerUser(personNumber, callback) {
@@ -44,12 +44,25 @@ router.post('/entryEligibilityCheck', function(req, res, next){
 router.post('/login', function(req, res, next){
   // Login if entry is available, else register aysnchronously and still login
   mongo.checkLoginEntry(req.body.personNumber, function(response){
+    console.log(response);
     // Register if entry is not present
     if (response== null) {
       registerUser(req.body.personNumber, function(status){
         res.sendStatus(status);
       });
+    } else {
+      res.sendStatus(200);
     }
+  });
+});
+
+// API to get points for user
+router.post('/getPoints', function(req, res, next){
+  blockchain.getPoints(req.body.personNumber, function(points, err){
+    if(!err)
+      res.send({"points": points});
+    else
+      res.sendStatus(500);
   });
 });
 

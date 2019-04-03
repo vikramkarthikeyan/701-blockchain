@@ -52,6 +52,14 @@ module.exports = {
 
     getSurveyEntryABI: function(personNumber, callback) {
         callback(contractInstance.methods.addSurveyEntry(personNumber).encodeABI());
+    },
+
+    getPoints: function(personNumber, callback) {
+        contractInstance.methods.getPoints(personNumber).call().then(function(points){
+            callback(points, null);
+        }).catch((error) => {
+            callback(null, "Transaction Reverted");
+        });
     }
 };
 

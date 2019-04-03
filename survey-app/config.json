@@ -1,0 +1,7 @@
+{
+    "contract_address": "0x6DB93fC8A878Da9206fA411Fe3D74914B3dc9Cd6",
+    "private_key": "1cc57c04427bd0b7e2d87aa2a2594570ff387350daf542e7824ce4c47479ca05",
+    "mongo_endpoint": "mongodb://localhost:27017/",
+    "blockchain_endpoint": "http://localhost:7545"
+
+}

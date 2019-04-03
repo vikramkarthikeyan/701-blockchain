@@ -1,5 +1,5 @@
 function login() {
-    debugger;
+    // debugger;
     var personNo = document.getElementById('personNumber').value;
     var response = {'personNumber' : personNo }
     var loginUrl = '/login';

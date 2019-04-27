@@ -10,7 +10,7 @@ module.exports = {
 
         MongoClient.connect(mongo_url, function(err, db) {
 
-            var dbo = db.db("survey");
+            var dbo = db.db("reporting");
 
             dbo.collection("users").findOne({'person_number': personNumber}, function(err, document) {
                 if (err) {
@@ -28,7 +28,7 @@ module.exports = {
 
         MongoClient.connect(mongo_url, function(err, db) {
 
-            var dbo = db.db("survey");
+            var dbo = db.db("reporting");
 
             dbo.collection("users").insertOne({'person_number': personNumber}, function(err, res) {
                 if (err) {
@@ -45,7 +45,7 @@ module.exports = {
 
         MongoClient.connect(mongo_url, function(err, db) {
 
-            var dbo = db.db("survey");
+            var dbo = db.db("reporting");
         
             dbo.collection("entries").insertOne(entry, function(err, res) {
               if (err) {

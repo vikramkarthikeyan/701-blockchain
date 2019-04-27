@@ -1,6 +1,7 @@
 var express = require('express');
 var mongo = require('../controllers/mongoWrapper');
 var blockchain = require('../controllers/blockchainWrapper');
+var path = require('path');
 
 var router = express.Router();
 
@@ -18,6 +19,7 @@ function registerUser(personNumber, callback) {
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
+
 
 // API to get the total number of Incident records
 router.post('/getTotalRecords', function(req, res, next){
@@ -42,18 +44,30 @@ router.post('/entryEligibilityCheck', function(req, res, next){
 
 // API for user login 
 router.post('/login', function(req, res, next){
+
   // Login if entry is available, else register aysnchronously and still login
   mongo.checkLoginEntry(req.body.personNumber, function(response){
-    console.log(response);
+
     // Register if entry is not present
     if (response== null) {
-      registerUser(req.body.personNumber, function(status){
-        res.sendStatus(status);
-      });
+        console.log("\nUser not found..creating user");
+
+        registerUser(req.body.personNumber, function(status){
+          if(status == 200){
+            return res.redirect('/dashboard');
+          } else {
+            res.sendStatus(status);
+          }      
+        });
+
     } else {
-      res.sendStatus(200);
+
+      res.redirect('/dashboard');
+
     }
+
   });
+
 });
 
 // API to get points for user

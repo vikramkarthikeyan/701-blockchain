@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>UB survey - Login</title>
+  <title>Report events @ UB</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -27,7 +27,7 @@
   <div class="container">
 
     <div class="row justify-content-center">
-      <h0 class="h1 text-white mb-4 justify-content-center" style="padding-top:50px">UB Survey</h0>
+      <h0 class="h1 text-white mb-4 justify-content-center" style="padding-top:50px">Report Events at UB</h0>
     </div>
 
     <!-- Outer Row -->
@@ -45,20 +45,24 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Login</h1>
                   </div>
+
                   <form class="user">
-                    <div class="form-group">
-                      <input type="text" class="form-control form-control-user" id="personNumber" aria-describedby="emailHelp" placeholder="Enter Person Number">
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox small">
-                        <input type="checkbox" class="custom-control-input" id="customCheck">
-                        <label class="custom-control-label" for="customCheck">Remember Me</label>
-                      </div>
-                    </div>
-                    <button onmouseup="login()" class="btn btn-primary btn-user btn-block">
-                      Login
-                    </button>
-                    <hr>
+                        <div class="form-group">
+                          <input type="text" class="form-control form-control-user" id="personNumber" aria-describedby="emailHelp" placeholder="Enter Person Number">
+                        </div>
+
+                        <div class="form-group">
+                          <div class="custom-control custom-checkbox small">
+                            <input type="checkbox" class="custom-control-input" id="customCheck">
+                            <label class="custom-control-label" for="customCheck">Remember Me</label>
+                          </div>
+                        </div>
+
+                        <button onclick="loginWithPersonNumber()" class="btn btn-primary btn-user btn-block">
+                          Login
+                        </button>
+
+                        <hr>
                   </form>
                   <hr>
                   
@@ -75,17 +79,6 @@
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
-
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
-
-  <link href="vendor/jquery.toast.min.css" rel="stylesheet" type="text/css"></script>
-  <script src="vendor/jquery.toast.min.js"></script>
   <script src="js/login.js"></script>
 
 </body>

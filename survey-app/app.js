@@ -17,4 +17,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+
+app.get('/dashboard',function(req,res){
+    console.log("THIS DASAHBOARD");
+    res.sendFile(__dirname + '/public/dashboard.html');
+});
+
 module.exports = app;

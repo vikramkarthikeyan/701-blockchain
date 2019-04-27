@@ -1,6 +1,7 @@
 function onLoad() {
-    console.log(localStorage.getItem("token"));
-    if (localStorage.getItem("token") == null) {
+    console.log(localStorage.getItem("PersonNumber"));
+    $('#login-number').text(localStorage.getItem("PersonNumber"));
+    if (localStorage.getItem("PersonNumber") == null) {
         window.location = "/index.html";
     }
 }

@@ -16,14 +16,14 @@
         <form>
 
         <div class="card-body">
-
+            <br style = "line-height:1.5;">
             <div class="form-group">
                 <b><label for="reportEve"> 1. Brief on Incident </label></b>
                 <textarea style="width: 100%" class="text-primary" id="reportEve">
                     </textarea>
             </div>
 
-
+            <br style = "line-height:1.5;">
             <div class="form-group">
                 <b>  <label for="typeEve "> 2. What type of Incident?</label></b>
                 </br>
@@ -36,7 +36,8 @@
                   </select>
                 </div>
             </div>
-
+            
+            <br style = "line-height:1.5;">
              <div class="form-group">
                 <b><label for="typeEve "> 3. Did you witness the Incident?</label></b>
               </br>
@@ -50,15 +51,44 @@
                   <span class="checkmark"></span>No
                 </label>
              </div>
-
+                
+            <br style = "line-height:1.5;">
              <div class="form-group">
               <b><label for="typeEve "> 4. Where did it Happen?</label></b>
              </br>
-              <input type="text" id="where">
+              <div class="custom-select1" style="width:30%">
+                <select id="where">
+                  <option value="x">Select</option>
+                  <option value="0">Alumni Arena</option>
+                  <option value="1">Baldy Hall</option>
+                  <option value="2">Bell Hall</option>
+                  <option value="3">Capen</option>
+                  <option value="4">Centre for the Arts</option>
+                  <option value="5">Clemens</option>
+                  <option value="6">Cooke</option>
+                  <option value="7">Davis</option>
+                  <option value="8">Elicott</option>
+                  <option value="9">South Campus</option>
+                  <option value="10">Student Union</option>
+                </select>
+              </div>
 
              </div>
+    
+            <br style = "line-height:1.5;">
+             <div class="form-group">
+              <b><label for="typeEve "> 5. When did it Happen?</label></b>
+             </br>
+              <input type="date" id="when" class="btn-primary">
+
+             </div>     
+    
+    
               
+              <div align="center" class="form-group container" >
              <button class="btn-primary" type="submit" id="submit" onmouseup="Onsubmit()"> SUBMIT</button>
+             <button class="btn-primary" type="submit" id="cancel" onmouseup="Oncancel()"> CANCEL</button>
+                </div>
             </div>
 
 

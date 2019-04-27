@@ -1,9 +1,11 @@
 function login() {
     // debugger;
     var personNo = document.getElementById('personNumber').value;
-    var response = {'personNumber' : personNo }
+    var request = {'personNumber' : personNo }
     var loginUrl = '/login';
-    console.log(response);
+
+    console.log("Login request:",request);
+
     var successCallback = function (data) {
         console.log(data);
         $.toast("Successfully Logged in");
@@ -13,7 +15,7 @@ function login() {
     $.ajax({
         type: "POST",
         url: loginUrl,
-        data: response,
+        data: request,
         success: successCallback
     });
 }

@@ -31,77 +31,18 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
+          <i class="fas fa-user-secret"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">UB Survey </div>
+        <div class="sidebar-brand-text mx-3">UB Reporting </div>
       </a>
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
-
-      <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
-        <a class="nav-link">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Questions</span></a>
-      </li>
       
 
       <!-- Divider -->
       <hr class="sidebar-divider">
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Questions
-      </div>
-
-      <!-- Nav Item - Pages Collapse Menu -->
-     <li class="nav-item" onclick="activate('1')">
-       <a class="nav-link">
-         <i class="fas fa-fw "></i>
-         <span> Question 1</span></a>
-     </li>
-
-     <li class="nav-item" onclick="activate('2')">
-        <a class="nav-link">
-          <i class="fas fa-fw "></i>
-          <span> Question 2</span></a>
-      </li>
-
-      <li class="nav-item" onclick="activate('3')">
-          <a class="nav-link">
-            <i class="fas fa-fw "></i>
-            <span> Question 3</span></a>
-        </li>
-
-      <li class="nav-item" onclick="activate('4')">
-            <a class="nav-link">
-              <i class="fas fa-fw "></i>
-              <span> Question 4</span></a>
-      </li>
-
-      <li class="nav-item" onclick="activate('5')">
-        <a class="nav-link">
-          <i class="fas fa-fw "></i>
-          <span> Question 5</span></a>
-      </li>
-
-      <li class="nav-item" onclick="activate('6')">
-        <a class="nav-link">
-          <i class="fas fa-fw "></i>
-          <span> Question 6</span></a>
-     </li>
-
-     <li class="nav-item" onclick="activate('feedback')">
-      <a class="nav-link">
-        <i class="fas fa-fw "></i>
-        <span> Feedback</span></a>
-</li>
-      <!-- Nav Item - Charts -->
-      
-
-      <!-- Divider -->
-      
     </ul>
     <!-- End of Sidebar -->
 
@@ -131,7 +72,6 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">UBIT Name</span>
-                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -167,371 +107,59 @@
           
 
           <!-- Content Row -->
-          <div class="row">
-
-            </div>
+          <div class="row" id="Report">
+              <button  class="btn-primary container" onclick="ReportForm()" id="button1" value="Report Incident" style="width:50%;">
+                Report Incident
+                </button>
+          </div>
           <!-- Content Row -->
 
-          <div class="row" id="addCourseno">
+          </br>
+          </br>
 
-            <!-- Area Chart -->
-            <div class="col-xl-8 col-lg-7">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">1. Enter Course number</h6>
-                  
-                </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="q-area">
-                    <input type="text" class="text-center text-primary" id="courseNumber">
-                    
-                   </div>
-                </div>
-                
-              </div>
-              
-              <button class="btn btn-primary btn-user btn-block" onclick="addCourseno()"> Next </button>
-              
-              
-            
-            
-              
-              
-            </div>
+          <div class="row" id="Validate">
+            <button  class="btn-primary container" onclick="ValidateForm()" id="button1" value="Validate Incident" style="width:50%;">
+              Validate Incident
+            </button>
+          </div>
 
-            
-        
+          </br>
+          </br>
+
+          <div class="row" id="View">
+            <button  class="btn-primary container"  onclick="onView()" id="button1" value="View Incidents" style="width:50%;">
+              View Incident
+              </button>
+          </div>
+
         </div>
 
-        <!-- QUESTION 1-->
-        <div class="row" style="display: none" id="ques1">
-            <div class="col-xl-8 col-lg-7">
-                <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">1. On a scale of 1-5, how do you think the Instructor conveys the course material ?</h6>
-                    
-                    </div>
-
-                    <div class="card-body">
-                        <div class="q-area">
-                         
-                            <label class="container">One
-                                <input type="radio" id="q1" name="radio1", value="1">
-                                <span class="checkmark"></span>
-                              </label>
-                              
-                              <label class="container">Two
-                                <input type="radio"  id="q1" name="radio1" value="2">
-                                <span class="checkmark"></span>
-                              </label>
-                              
-                              <label class="container">Three
-                                <input type="radio" name="radio1" id="q1" value="3">
-                                <span class="checkmark"></span>
-                              </label>
-                              
-                              <label class="container">Four
-                                <input type="radio" name="radio1" id="q1" value="4">
-                                <span class="checkmark"></span>
-                              </label> 
-
-                              <label class="container">Five
-                                  <input type="radio" name="radio1" id="q1" value="5">
-                                  <span class="checkmark"></span>
-                                </label>
-                                <button class="btn btn-primary btn-user btn-block" onclick="addq1()"> Next </button>
-                                
-                            
-                         </div>
-                      </div>
-                  </div>
-      </div>
-      </div>
-      <!--End question 1-->
-
-      <!-- QUESTION 2-->
-      <div class="row" style="display: none" id="ques2">
-          <div class="col-xl-8 col-lg-7">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">2. On a scale of 1-5, how stressful do you feel the assignments were? </h6>
-                  
-                  </div>
-
-                  <div class="card-body">
-                      <div class="q-area">
-                       
-                          <label class="container">One
-                              <input type="radio" name="radio2" id="q2" value="1">
-                              <span class="checkmark"></span>
-                            </label>
-                            
-                            <label class="container">Two
-                              <input type="radio"  name="radio2" id="q2" value="2">
-                              <span class="checkmark"></span>
-                            </label>
-                            
-                            <label class="container">Three
-                              <input type="radio" name="radio2" id="q2" value="3">
-                              <span class="checkmark"></span>
-                            </label>
-                            
-                            <label class="container">Four
-                              <input type="radio" name="radio2" id="q2" value="4">
-                              <span class="checkmark"></span>
-                            </label>
-
-                            <label class="container">Five
-                                <input type="radio" name="radio2" id="q2" value="5">
-                                <span class="checkmark"></span>
-                              </label>
-
-                              <button class="btn btn-primary btn-user btn-block" onclick="addq2()"> Next </button>
-                              
-                       </div>
-                    </div>
-                </div>
-    </div>
-    </div>
-    <!--End question 2-->
-
-
-          <!-- QUESTION 3-->
-          <div class="row" style="display: none" id="ques3">
-            <div class="col-xl-8 col-lg-7">
-                <div class="card shadow mb-4">
-                  <!-- Card Header - Dropdown -->
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">3. On a scale of 1-5, would you take another course offered by the instructor? </h6>
-                    
-                    </div>
-  
-                    <div class="card-body">
-                        <div class="q-area">
-                         
-                            <label class="container">One
-                                <input type="radio" name="radio3" id="q3" value="1">
-                                <span class="checkmark"></span>
-                              </label>
-                              
-                              <label class="container">Two
-                                <input type="radio"  name="radio3" id="q3" value="2">
-                                <span class="checkmark"></span>
-                              </label>
-                              
-                              <label class="container">Three
-                                <input type="radio" name="radio3" id="q3" value="3">
-                                <span class="checkmark"></span>
-                              </label>
-                              
-                              <label class="container">Four
-                                <input type="radio" name="radio3" id="q3" value="4">
-                                <span class="checkmark"></span>
-                              </label>
-  
-                              <label class="container">Five
-                                  <input type="radio" name="radio3" id="q3" value="5">
-                                  <span class="checkmark"></span>
-                                </label>
-  
-                                <button class="btn btn-primary btn-user btn-block" onclick="addq3()"> Next </button>
-                                
-                         </div>
-                      </div>
-                  </div>
-      </div>
-      </div>
-      <!--End question 3-->
-
-
-      <!-- QUESTION 4-->
-      <div class="row" style="display: none" id="ques4">
-        <div class="col-xl-8 col-lg-7">
+        <div class="row" style="display:none" id="myview">
+          <div class="col-xl-1 col-lg-7">
             <div class="card shadow mb-4">
               <!-- Card Header - Dropdown -->
               <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">4. On a scale of 1-5, how useful was the course material? </h6>
-                
-                </div>
 
-                <div class="card-body">
-                    <div class="q-area">
-                     
-                        <label class="container">One
-                            <input type="radio" name="radio4" id="q4" value="1">
-                            <span class="checkmark"></span>
-                          </label>
-                          
-                          <label class="container">Two
-                            <input type="radio"  name="radio4" id="q4" value="2">
-                            <span class="checkmark"></span>
-                          </label>
-                          
-                          <label class="container">Three
-                            <input type="radio" name="radio4" id="q4" value="3">
-                            <span class="checkmark"></span>
-                          </label>
-                          
-                          <label class="container">Four
-                            <input type="radio" name="radio4" id="q4" value="4">
-                            <span class="checkmark"></span>
-                          </label>
+                <h5 class="m-0 font-weight-bold text-primary">All incidents </h5>
+              
+              </div>
+              
+              <!-- TO ADD incidents to the table -->
+              <div class="card-body">
+                  <div class="q-area">
+                    <table class="table" id="my-table">
+                      
+                    </table>
 
-                          <label class="container">Five
-                              <input type="radio" name="radio4" id="q4" value="5">
-                              <span class="checkmark"></span>
-                            </label>
-
-                            <button class="btn btn-primary btn-user btn-block" onclick="addq4()"> Next </button>
-                            
-                     </div>
                   </div>
               </div>
-  </div>
-  </div>
-  <!--End question 4-->
-
-        <!-- QUESTION 5-->
-        <div class="row" style="display: none" id="ques5">
-          <div class="col-xl-8 col-lg-7">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">5. On a scale of 1-5, how difficult is the course? </h6>
-                  
-                  </div>
-  
-                  <div class="card-body">
-                      <div class="q-area">
-                       
-                          <label class="container">One
-                              <input type="radio" name="radio5" id="q5" value="1">
-                              <span class="checkmark"></span>
-                            </label>
-                            
-                            <label class="container">Two
-                              <input type="radio"  name="radio5" id="q5" value="2">
-                              <span class="checkmark"></span>
-                            </label>
-                            
-                            <label class="container">Three
-                              <input type="radio" name="radio5" id="q5" value="3">
-                              <span class="checkmark"></span>
-                            </label>
-                            
-                            <label class="container">Four
-                              <input type="radio" name="radio5" id="q5" value="4">
-                              <span class="checkmark"></span>
-                            </label>
-  
-                            <label class="container">Five
-                                <input type="radio" name="radio5" id="q5" value="5">
-                                <span class="checkmark"></span>
-                              </label>
-  
-                              <button class="btn btn-primary btn-user btn-block" onclick="addq5()"> Next </button>
-                              
-                       </div>
-                    </div>
-                </div>
-    </div>
-    </div>
-    <!--End question 5-->
-
-
-            <!-- QUESTION 6-->
-            <div class="row" style="display: none" id="ques6">
-              <div class="col-xl-8 col-lg-7">
-                  <div class="card shadow mb-4">
-                    <!-- Card Header - Dropdown -->
-                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                      <h6 class="m-0 font-weight-bold text-primary">6. On an average, how many hours per week did you end up spending on work related to
-                        the course? </h6>
-                      
-                      </div>
-      
-                      <div class="card-body">
-                          <div class="q-area">
-                           
-                              <label class="container">1-2 hours
-                                  <input type="radio" name="radio6" id="q6" value="1-2 hours">
-                                  <span class="checkmark"></span>
-                                </label>
-                                
-                                <label class="container">2-4 hours
-                                  <input type="radio"  name="radio6" id="q6" value="2-4 hours">
-                                  <span class="checkmark"></span>
-                                </label>
-                                
-                                <label class="container">4-6 hours
-                                  <input type="radio" name="radio6" id="q6" value="4-6 hours">
-                                  <span class="checkmark"></span>
-                                </label>
-                                
-                                <label class="container">6-8 hours
-                                  <input type="radio" name="radio6" id="q6" value="6-8 hours">
-                                  <span class="checkmark"></span>
-                                </label>
-      
-                                <label class="container">8-10 hours
-                                    <input type="radio" name="radio6" id="q6" value="8-10 hours">
-                                    <span class="checkmark"></span>
-                                  </label>
-      
-                                  <button class="btn btn-primary btn-user btn-block" onclick="addq6()"> Next </button>
-                                  
-                           </div>
-                        </div>
-                    </div>
-        </div>
-        </div>
-        <!--End question 6-->
-
-
-        
-
-    <!-- Survey Feedback -->
-
-    <div class="row" style="display: none" id="survey_feedback">
-
-      <!-- Area Chart -->
-      <div class="col-xl-8 col-lg-7">
-        <div class="card shadow mb-4">
-          <!-- Card Header - Dropdown -->
-          <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-            <h6 class="m-0 font-weight-bold text-primary">Survey Feedback (Optional)</h6>
-            
+            </div>
           </div>
-          <!-- Card Body -->
-          <div class="card-body">
-            <div class="q-area">
-              <textarea style="width:100%" class="text-primary" id="s_feedback">
-                </textarea>
-
-              
-             </div>
-          </div>
-          
         </div>
-        
-        <button class="btn btn-primary btn-user btn-block" onclick="feedback()"> Submit </button>
-        
-        
-      
-      
-        
-        
-      </div>
 
-      
-  
-  </div>
 
-  <!-- Survey Feedback-->
+
+          <!--  -->
   
 <!--End of Success-->
       
@@ -559,7 +187,7 @@
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
-          <div class="copyright text-center my-auto">
+          <div class="copyright text-center my-auto" style="padding-top:400px">
             <span>Copyright &copy; CSE 701</span>
           </div>
         </div>
@@ -623,3 +251,9 @@
 </body>
 
 </html>
+
+
+
+
+
+

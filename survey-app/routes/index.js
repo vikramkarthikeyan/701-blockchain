@@ -74,7 +74,7 @@ router.post('/login', function(req, res, next){
 router.post('/getPoints', function(req, res, next){
   blockchain.getPoints(req.body.personNumber, function(points, err){
     if(!err)
-      res.send({"points": points});
+      res.send({"points": points.toNumber()});
     else
       res.sendStatus(500);
   });

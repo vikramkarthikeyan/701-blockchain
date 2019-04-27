@@ -1,9 +1,21 @@
 function onLoad() {
     console.log(localStorage.getItem("PersonNumber"));
+    
     $('#login-number').text(localStorage.getItem("PersonNumber"));
+
+    $.ajax({
+        type: "POST",
+        url: '/getPoints',
+        data: {"personNumber": localStorage.getItem("PersonNumber")},
+        success: function(data) {
+            console.log(data.points);
+        }
+    });
+    
     if (localStorage.getItem("PersonNumber") == null) {
         window.location = "/index.html";
     }
+
 }
 
 function ReportForm(){

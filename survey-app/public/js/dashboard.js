@@ -9,6 +9,7 @@ function onLoad() {
         data: { "personNumber": localStorage.getItem("PersonNumber") },
         success: function(data) {
             console.log(data.points);
+            userPoints = data.points;
             $('#login-points').text(data.points);
         },
         error: function(data) {
@@ -20,6 +21,24 @@ function onLoad() {
         window.location = "/index.html";
     }
 
+}
+
+var userPoints = 0;
+
+function redeemPoints() {
+    $.ajax({
+        type: "POST",
+        url: '/getPoints',
+        data: { "personNumber": localStorage.getItem("PersonNumber") },
+        success: function(data) {
+            console.log(data.points);
+            userPoints = data.points;
+            $('#login-points').text(data.points);
+        },
+        error: function(data) {
+            $('#login-points').text("BANNED");
+        }
+    });
 }
 
 function ReportForm(){

@@ -39,19 +39,18 @@ module.exports = {
     },
 
     // Wrappers for Smart Contract functions
-
     getRegisterUserABI: function(personNumber, callback) {
         callback(contractInstance.methods.registerUser(personNumber).encodeABI());
+    },
+
+    getSurveyEntryABI: function(personNumber, callback) {
+        callback(contractInstance.methods.addSurveyEntry(personNumber).encodeABI());
     },
 
     getSurveyCount: function(callback) {
         contractInstance.methods.getSurveyCount().call().then(function(count){
             callback(count);
         });
-    },
-
-    getSurveyEntryABI: function(personNumber, callback) {
-        callback(contractInstance.methods.addSurveyEntry(personNumber).encodeABI());
     },
 
     getPoints: function(personNumber, callback) {

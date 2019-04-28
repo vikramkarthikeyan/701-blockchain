@@ -73,11 +73,13 @@ function Onsubmit(){
     var brief=document.getElementById('reportEve');
     var inctype=document.getElementById('incident').value;
     var witness= document.getElementById('q3').value;
-    var whereI= document.getElementById('where');
+    var whereI= document.getElementById('where').value;
+    var when= document.getElementById('when');
     entry["Brief"]=brief;
     entry["type"]=inctype;
     entry["witness"]=witness;
     entry["Where"]=whereI;
+    entry["when"]=when;
 
     console.log(entry);
 
@@ -103,3 +105,6 @@ function Onsubmit(){
 
 }
 //console.log(document.getElementsByTagName("select").value)
+
+function Oncancel(){
+    window.location="/dashboard.html";

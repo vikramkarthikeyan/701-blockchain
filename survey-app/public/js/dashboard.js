@@ -9,6 +9,7 @@ function onLoad() {
         data: {"personNumber": localStorage.getItem("PersonNumber")},
         success: function(data) {
             console.log(data.points);
+            $('#login-points').text(data.points);
         }
     });
     

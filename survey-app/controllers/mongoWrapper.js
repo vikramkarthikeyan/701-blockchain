@@ -55,8 +55,6 @@ module.exports = {
               db.close();
             });
         });
-        
-        res.sendStatus(200);
 
     }
 

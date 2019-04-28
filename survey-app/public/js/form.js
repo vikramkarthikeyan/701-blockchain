@@ -7,8 +7,10 @@ function onLoad() {
 function Onsubmit(){
     var userUrl = '/addEntry';
     var obj=new Object();
-    debugger;
-    var brief=document.getElementById('Brief').value;
+
+    // debugger;
+
+    var brief=document.getElementById('reportEve').value;
     var inctype=document.getElementById('incident').value;
     var witness= document.getElementById('q3').value;
     var whereI= document.getElementById('where').value;

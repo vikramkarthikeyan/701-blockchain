@@ -63,9 +63,7 @@ function closeAllSelect(elmnt) {
 }
 
 document.addEventListener("click", closeAllSelect);
-// y=document.getElementById("incident");
-// console.log(b);
-console
+
 var entry={}
 
 function Onsubmit(){
@@ -104,7 +102,7 @@ function Onsubmit(){
 
 
 }
-//console.log(document.getElementsByTagName("select").value)
 
 function Oncancel(){
     window.location="/dashboard.html";
+}

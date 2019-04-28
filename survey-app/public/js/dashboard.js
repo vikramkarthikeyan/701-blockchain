@@ -83,3 +83,6 @@ function addRow(tableId, data){
     newCell.appendChild(newText);
 }
 
+function removeUserEntry() {
+    window.localStorage.removeItem("PersonNumber");
+}

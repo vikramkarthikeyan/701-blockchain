@@ -1,6 +1,6 @@
 function onLoad() {
     console.log(localStorage.getItem("PersonNumber"));
-    if (localStorage.getItem("token") == null) {
+    if (localStorage.getItem("PersonNumber") == null) {
         window.location = "/dashboard.html";
     }
 }
@@ -33,7 +33,6 @@ function Onsubmit(){
     var entrySuccessCallback = function (data) {
         console.log(data);
         setTimeout(function() {
-            window.localStorage.removeItem("PersonNumber");
             window.location = "/dashboard.html";    
         }, 2500);
         $.toast({

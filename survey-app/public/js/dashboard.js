@@ -26,19 +26,22 @@ function onLoad() {
 var userPoints = 0;
 
 function redeemPoints() {
-    $.ajax({
-        type: "POST",
-        url: '/getPoints',
-        data: { "personNumber": localStorage.getItem("PersonNumber") },
-        success: function(data) {
-            console.log(data.points);
-            userPoints = data.points;
-            $('#login-points').text(data.points);
-        },
-        error: function(data) {
-            $('#login-points').text("BANNED");
-        }
-    });
+
+    if(userPoints == 0) {
+        alert("You have no points to redeem! Report events to earn points.")
+    } else {
+        $.ajax({
+            type: "POST",
+            url: '/redeemPoints',
+            data: { "personNumber": localStorage.getItem("PersonNumber"), "points": userPoints },
+            success: function(data) {
+                console.log(data);
+            },
+            error: function(data) {
+                alert('This user cannot redeem points! Contact support@survey.buffalo.edu')
+            }
+        });
+    }
 }
 
 function ReportForm(){

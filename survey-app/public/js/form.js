@@ -1,14 +1,12 @@
 function onLoad() {
-    console.log(localStorage.getItem("token"));
+    console.log(localStorage.getItem("PersonNumber"));
     if (localStorage.getItem("token") == null) {
         window.location = "/dashboard.html";
     }
 }
 function Onsubmit(){
-    var userUrl = '/addEntry';
-    var obj=new Object();
 
-    // debugger;
+    var entry=new Object();
 
     var brief=document.getElementById('reportEve').value;
     var inctype=document.getElementById('incident').value;
@@ -16,44 +14,49 @@ function Onsubmit(){
     var whereI= document.getElementById('where').value;
     var when= document.getElementById('when').value;
 
-    var wit=new Boolean(false);
+    var wit = new Boolean(false);
 
     if(witness.localeCompare("Yes")){
-        wit=true;
+        wit = true;
     }
     else{
-        wit=false;
+        wit = false;
     }
-
     
-    obj.Brief=brief;
-    obj.type=inctype;
-    obj.witness=wit;
-    obj.Where=whereI;
-    obj.when=when;
+    entry.Brief=brief;
+    entry.type=inctype;
+    entry.witness=wit;
+    entry.Where=whereI;
+    entry.when=when;
+    entry.personNumber = parseInt(localStorage.getItem("PersonNumber"));
 
-    var entry=JSON.stringify(obj);
-
-    console.log(entry);
-
-    var successCallback = function (data) {
-                console.log(data);
-                setTimeout(function() {
-                    window.localStorage.removeItem("token");
-                    window.location = "/dashboard.html";    
-                }, 2500);
-                $.toast({
-                    heading: 'Thank you',
-                    text: 'We appreciate.'
-                })
-        
+    var entrySuccessCallback = function (data) {
+        console.log(data);
+        setTimeout(function() {
+            window.localStorage.removeItem("PersonNumber");
+            window.location = "/dashboard.html";    
+        }, 2500);
+        $.toast({
+            heading: 'Thank you',
+            text: 'We appreciate.'
+        }) 
     }
+
+    var eligibilitySuccessCallback = function (data) {
+        $.ajax({
+            type: "POST",
+            url: '/addEntry',
+            data: entry,
+            success: entrySuccessCallback
+        });
+    }
+
     $.ajax({
                 type: "POST",
-                url: userUrl,
+                url: '/entryEligibilityCheck',
                 data: entry,
-                success: successCallback
-            });
+                success: eligibilitySuccessCallback
+    });
 
 
 }

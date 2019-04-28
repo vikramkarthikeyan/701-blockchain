@@ -47,6 +47,10 @@ module.exports = {
         callback(contractInstance.methods.addSurveyEntry(personNumber).encodeABI());
     },
 
+    getRedeemPointsABI: function(personNumber, points, callback) {
+        callback(contractInstance.methods.redeemPoints(personNumber, points).encodeABI());
+    },
+
     getSurveyCount: function(callback) {
         contractInstance.methods.getSurveyCount().call().then(function(count){
             callback(count);

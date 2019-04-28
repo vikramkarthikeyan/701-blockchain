@@ -51,6 +51,10 @@ module.exports = {
         callback(contractInstance.methods.redeemPoints(personNumber, points).encodeABI());
     },
 
+    getBanUserABI: function(personNumber, callback) {
+        callback(contractInstance.methods.banUser(personNumber).encodeABI());
+    },
+
     getSurveyCount: function(callback) {
         contractInstance.methods.getSurveyCount().call().then(function(count){
             callback(count);

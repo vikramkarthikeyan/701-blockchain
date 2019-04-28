@@ -83,8 +83,23 @@ router.post('/getPoints', function(req, res, next){
 
 // Redeem points
 router.post('/redeemPoints', function(req, res, next){
-  console.log(req.body);
   blockchain.getRedeemPointsABI(req.body.personNumber, req.body.points, function(abi){
+    blockchain.signTransaction(abi, function(status){
+      res.sendStatus(status);
+    });
+  });
+});
+
+router.post('/getAllIncidents', function(req, res, next){
+  mongo.getAllIncidents(function(response){
+    console.log(response);
+    res.send(response);
+  });
+});
+
+router.post('/banUser', function(req, res, next){
+  console.log(req.body);
+  blockchain.getBanUserABI(req.body.personNumber, function(abi){
     blockchain.signTransaction(abi, function(status){
       res.sendStatus(status);
     });

@@ -56,6 +56,21 @@ module.exports = {
             });
         });
 
+    },
+
+    getAllIncidents: function(callback){
+        MongoClient.connect(mongo_url, function(err, db) {
+            var dbo = db.db("reporting");
+
+            dbo.collection("entries").find({}).toArray(function(err, res){
+                if (err) {
+                    res.sendStatus(500);
+                    throw err;
+                }
+                db.close();
+                callback(res);
+            });
+        });
     }
 
 };

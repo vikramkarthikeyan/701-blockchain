@@ -26,7 +26,7 @@
             <div class="form-group">
                 <b>  <label for="typeEve "> 2. What type of Incident?</label></b>
                 </br>
-               <div class="container" style="position:fixed;">
+               <div class="container" style="position:fixed; padding-left: 0px">
                   <select id="incident" class="btn-primary" style="width:30%;">
                     <option value="0">Select</option>
                     <option value="Abuse">Abuse</option>
@@ -55,7 +55,7 @@
              <div class="form-group">
               <b><label for="typeEve "> 4. Where did it Happen?</label></b>
              </br>
-              <div class="container" style="position:fixed">
+              <div class="container" style="position:fixed; padding-left: 0px">
                 <select id="where" class="btn-primary" style="width:30%;">
                   <option value="x">Select</option>
                   <option value="Alumni Arena">Alumni Arena</option>
@@ -78,14 +78,14 @@
              <div class="form-group">
               <b><label for="typeEve "> 5. When did it Happen?</label></b>
              </br>
-              <input type="date" id="when" class="btn-primary">
-
+              <input type="date" id="when" class="btn btn-primary">
              </div>   
             <br>
             <div class="row">
             <b><input type="checkbox" name="terms" id="terms" onchange="activateButton(this)">  If found that your report is fake, all of your acquired points will be removed and repeat offenders will be banned.</b>
             </div>
-              <div align="center" class="form-group container" >
+            <br>
+            <div align="center" class="form-group container" >
              <button class="btn btn-primary" type="button" id="submit" onmouseup="Onsubmit()"> SUBMIT</button>
              <button class="btn btn-primary" type="button" id="cancel" onmouseup="Oncancel()"> CANCEL</button>
                 </div>

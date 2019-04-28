@@ -1,0 +1,47 @@
+[
+    {
+        "_id": "5cc6141b90da6b29ec444897",
+        "Brief": "dadsadsa",
+        "type": "Abuse",
+        "witness": "false",
+        "Where": "x",
+        "when": "2019-04-18",
+        "personNumber": "2121"
+    },
+    {
+        "_id": "5cc614c8cef9292a6f65b8d0",
+        "Brief": "sasa",
+        "type": "Sexual Assualt",
+        "witness": "false",
+        "Where": "Alumni Arena",
+        "when": "2019-04-10",
+        "personNumber": "2121"
+    },
+    {
+        "_id": "5cc614facef9292a6f65b8d1",
+        "Brief": "yggh",
+        "type": "Abuse",
+        "witness": "false",
+        "Where": "Baldy Hall",
+        "when": "2019-04-03",
+        "personNumber": "2121"
+    },
+    {
+        "_id": "5cc6151fcef9292a6f65b8d2",
+        "Brief": "gfh",
+        "type": "Abuse",
+        "witness": "false",
+        "Where": "Baldy Hall",
+        "when": "2019-04-04",
+        "personNumber": "2121"
+    },
+    {
+        "_id": "5cc61557cef9292a6f65b8d3",
+        "Brief": "sadsa",
+        "type": "Sexual Assualt",
+        "witness": "false",
+        "Where": "Baldy Hall",
+        "when": "2019-04-17",
+        "personNumber": "2121"
+    }
+]

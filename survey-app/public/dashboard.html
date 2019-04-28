@@ -70,8 +70,9 @@
             
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
+              <!-- <span class="mr-2 d-none d-lg-inline text-gray-600 small">UBIT Name:  </span> -->
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">UBIT Name: <span id="login-number"></span> Points Available: <span id="login-points">0</span></span>
+                <i class="fas fa-user fa-lg "></i>
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -103,24 +104,42 @@
         <!-- Begin Page Content -->
         <div class="container-fluid" >
 
-          <!-- Page Heading -->
-          
+          <!-- Cards -->
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Report an Incident</h5>
+                  <p class="card-text">If you see something, say something. Your report will be kept fully anonymous and you will be rewarded for the help you provide in making our campus a better place. </p>
+                  <a href="#" class="btn btn-primary" onclick="ReportForm()">Report an Incident</a>
+                </div>
+              </div>
+            </div>
+            <br>
+            
+            <div class="col-sm-3">
+                <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">View all incidents</h5>
+                  <p class="card-text"> This is a fully open data repository to keep you updated on the current unfortunate events occuring in our campus. </p>
+                  <a href="#" class="btn btn-primary" onclick="onView()">View Incidents</a>
+                </div>
+                </div>
+            </div>
 
-          <!-- Content Row -->
-          <div class="row" id="Report">
-              <button  class="btn-primary container" onclick="ReportForm()" id="button1" value="Report Incident" style="width:50%;">
-                Report Incident
-                </button>
-          </div>
-          <!-- Content Row -->
+            <div class="col-sm-3">
+              <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Your Profile</h5>
+                <p class="card-text"> Person Number: <span id="login-number">0</span> </p>
+                <p class="card-text"> Current points: <span id="login-points">0</span> </p>
+                <a href="#" class="btn btn-primary">Redeem Points</a>
+              </div>
+              </div>
 
-          </br>
-          </br>
 
-          <div class="row" id="View">
-            <button  class="btn-primary container"  onclick="onView()" id="button1" value="View Incidents" style="width:50%;">
-              View Incident
-              </button>
+            </div>
+
           </div>
 
         </div>
@@ -152,7 +171,7 @@
 
           <!--  -->
   
-<!--End of Success-->
+
       
 
 

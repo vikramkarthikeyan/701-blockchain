@@ -38,7 +38,7 @@ contract Survey {
      return totalSurveysCollected;
  }
   
- function getPoints(uint user) view public registeredUser(user) returns(uint){
+ function getPoints(uint user) view public registeredUser(user) notBanned(user) returns(uint){
      return users[user].balance;
  }
 

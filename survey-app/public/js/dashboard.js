@@ -6,10 +6,13 @@ function onLoad() {
     $.ajax({
         type: "POST",
         url: '/getPoints',
-        data: {"personNumber": localStorage.getItem("PersonNumber")},
+        data: { "personNumber": localStorage.getItem("PersonNumber") },
         success: function(data) {
             console.log(data.points);
             $('#login-points').text(data.points);
+        },
+        error: function(data) {
+            $('#login-points').text("BANNED");
         }
     });
     

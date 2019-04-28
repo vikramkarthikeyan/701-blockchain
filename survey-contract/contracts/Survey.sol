@@ -8,6 +8,7 @@ contract Survey {
  struct User {
      uint balance;
      bool active;
+     bool banned;
  }
  
  mapping (uint => User) public users;
@@ -24,10 +25,12 @@ contract Survey {
  modifier newUser(uint user) { require(users[user].active == false); _; }
  modifier registeredUser(uint user) {  require(users[user].active == true); _; }
  modifier hasPoints(uint user, uint points) {    require(users[user].balance >= points); _;}
+ modifier notBanned(uint user) { require(users[user].banned == false); _;}
  
  function registerUser(uint user) public newUser(user){
      users[user].balance = 0;
      users[user].active = true;
+     users[user].banned = false;
      emit userRegistered(user);
  }
 
@@ -38,8 +41,12 @@ contract Survey {
  function getPoints(uint user) view public registeredUser(user) returns(uint){
      return users[user].balance;
  }
+
+ function banUser(uint user) public registeredUser(user){
+     users[user].banned = true;
+ }
  
- function addSurveyEntry(uint user) public registeredUser(user){
+ function addSurveyEntry(uint user) public registeredUser(user) notBanned(user){
      users[user].balance += pointsPerSurvey;
      totalSurveysCollected += 1;
      emit allowEntry(user);

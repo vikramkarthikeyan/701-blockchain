@@ -9,7 +9,7 @@ contract Survey {
      uint balance;
      bool active;
      bool banned;
-     bytes32 secret;
+     string secret;
  }
  
  mapping (uint => User) public users;
@@ -43,11 +43,11 @@ contract Survey {
      return users[user].balance;
  }
  
- function getUserHash(uint user) view public registeredUser(user) notBanned(user) returns(bytes32){
+ function getUserHash(uint user) view public registeredUser(user) notBanned(user) returns(string memory){
      return users[user].secret;
  }
  
- function updateUserHash(uint user, bytes32 secret) public registeredUser(user) notBanned(user){
+ function updateUserHash(uint user, string memory secret) public registeredUser(user) notBanned(user){
      users[user].secret = secret;
  }
 

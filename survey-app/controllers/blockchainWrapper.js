@@ -57,9 +57,9 @@ module.exports = {
     },
 
     getUpdateUserHashABI: function(personNumber, hash, callback) {
-        console.log(hash);
-        console.log(web3.utils.fromAscii(hash));
-        callback(contractInstance.methods.updateUserHash(personNumber, web3.utils.fromAscii(hash)).encodeABI());
+        console.log(hash.toString());
+        // console.log(web3.utils.fromAscii(hash));
+        callback(contractInstance.methods.updateUserHash(personNumber, hash).encodeABI());
     },
 
     getSurveyCount: function(callback) {
@@ -77,7 +77,7 @@ module.exports = {
     },
 
     getUserHash: function(personNumber, callback) {
-        contractInstance.methods.getPoints(personNumber).call().then(function(points){
+        contractInstance.methods.getUserHash(personNumber).call().then(function(points){
             callback(points, null);
         }).catch((error) => {
             callback(null, "Transaction Reverted");

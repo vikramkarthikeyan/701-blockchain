@@ -95,12 +95,14 @@ function calculateUserHash(currentHash) {
         url: '/getUserHash',
         data: {'personNumber': parseInt(localStorage.getItem("PersonNumber"))},
         success: function(response) {
-            var previousHash = response.userHash._hex;
+            var previousHash = response.userHash;
 
-            // parseInt(hex).toLocaleString('fullwide', { useGrouping: false })
+            if(previousHash === "") {
+                previousHash = "0x00"
+            }
 
-            var newHash = parseInt(currentHash, 16) + parseInt(currentHash, 16);
-            // newHash = newHash.toLocaleString('fullwide', { useGrouping: false })
+            var newHash = parseInt(currentHash, 16) + parseInt(previousHash, 16);
+
             newHash = newHash.toString(16)
 
             console.log(previousHash, currentHash, newHash);
@@ -111,8 +113,8 @@ function calculateUserHash(currentHash) {
             alert('Failed to compute user hash!');
         }
     });
-
 }
+
 
 function updateUserHash(newHash) {
     console.log("In update new hash:",newHash);

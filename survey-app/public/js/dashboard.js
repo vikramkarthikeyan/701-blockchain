@@ -68,7 +68,18 @@ function onView(){
     document.getElementById('Report').style.display='none';
     document.getElementById('Validate').style.display='none';
     document.getElementById('View').style.display='none';
-    document.getElementById('myview').style.display='block'
+    document.getElementById('myview').style.display='block';
+    $('#my_table').DataTable( {
+        "ajax": "sample-incidents-response.json",
+        "columns": [
+            {"data": "_id"},
+            {"data": "type"},
+            {"data": "witness"},
+            {"data": "Where"},
+            {"data": "when"},
+            {"data": "Brief"}
+        ]
+    } );
 }
 
 function addRow(tableId, data){

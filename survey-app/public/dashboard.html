@@ -145,27 +145,40 @@
         </div>
 
         <div class="row" style="display:none" id="myview">
-          <div class="col-xl-1 col-lg-7">
+          <div class="col-xl-8 col-lg-7">
             <div class="card shadow mb-4">
-              <!-- Card Header - Dropdown -->
-              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-
-                <h5 class="m-0 font-weight-bold text-primary">All incidents </h5>
-              
-              </div>
-              
-              <!-- TO ADD incidents to the table -->
-              <div class="card-body">
-                  <div class="q-area">
-                    <table class="table" id="my-table">
-                      
-                    </table>
-
-                  </div>
+              <div class="card-header shadow">
+                
+                <div class="card-body">
+                  <table id="my_table" class="display" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Type</th>
+                            <th>Witness</th>
+                            <th>Location</th>
+                            <th>Date</th>
+                            <th>Brief</th>
+                            
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>ID</th>
+                            <th>Type</th>
+                            <th>Witness</th>
+                            <th>Location</th>
+                            <th>Date</th>
+                            <th>Brief</th>
+                        </tr>
+                    </tfoot>
+                </table>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
 
 
 

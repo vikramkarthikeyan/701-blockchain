@@ -1,4 +1,5 @@
-[
+{ "data":
+ [
     {
         "_id": "5cc6141b90da6b29ec444897",
         "Brief": "dadsadsa",
@@ -45,3 +46,4 @@
         "personNumber": "2121"
     }
 ]
+}

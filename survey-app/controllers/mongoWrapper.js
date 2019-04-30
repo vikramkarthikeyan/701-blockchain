@@ -72,6 +72,21 @@ module.exports = {
                 callback(res);
             });
         });
-    }
+    },
+
+    getUserEntries: function(personNumber, callback){
+        MongoClient.connect(mongo_url, function(err, db) {
+            var dbo = db.db("reporting");
+
+            dbo.collection("entries").find({'personNumber': personNumber},{_id: -1}).toArray(function(err, res){
+                if (err) {
+                    res.sendStatus(500);
+                    throw err;
+                }
+                db.close();
+                callback(res);
+            });
+        });
+    },
 
 };

@@ -126,4 +126,23 @@ router.post('/getUserHash', function(req, res, next){
   });
 });
 
+// API to get all of user's entries for verification
+router.post('/verifyUserEntries', function(req, res, next){
+  mongo.getUserEntries(req.body.personNumber, function(response){
+    computeHash(response, function(hash){
+      res.send({"computedHash": hash});
+    });
+  });
+});
+
+function computeHash(response, callback) {
+  var hash = "0x00";
+  response.forEach(function(value){
+    var currentHash = value._id;
+    hash =  parseInt(currentHash, 16) + parseInt(hash, 16);
+    hash = hash.toString(16);
+  });
+  callback(hash);
+}
+
 module.exports = router;

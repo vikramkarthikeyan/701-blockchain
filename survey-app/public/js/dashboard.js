@@ -66,34 +66,39 @@ function activate(link) {
 
 function onView(){
     document.getElementById('Report').style.display='none';
-    document.getElementById('Validate').style.display='none';
     document.getElementById('View').style.display='none';
     document.getElementById('myview').style.display='block';
-    $('#my_table').DataTable( {
-        "ajax": "sample-incidents-response.json",
-        "columns": [
-            {"data": "_id"},
-            {"data": "type"},
-            {"data": "witness"},
-            {"data": "Where"},
-            {"data": "when"},
-            {"data": "Brief"}
-        ]
-    } );
+
+    $.ajax({
+        type: "POST",
+        url: '/getAllIncidents',
+        data: {},
+        success: function(response) {
+            $('#my_table').DataTable( {
+                data: response,
+                "columns": [
+                    {"data": "_id"},
+                    {"data": "type"},
+                    {"data": "witness"},
+                    {"data": "Where"},
+                    {"data": "when"},
+                    {"data": "Brief"}
+                ]
+            } );
+        },
+        error: function(data) {
+            alert('Data fetch failed....');
+        }
+    });  
 }
 
-function addRow(tableId, data){
-    let tableRef= document.getElementById(tableId);
-    let newRow = tableRef.insertRow(-1);
+function goBack() {
 
-    
-    let newCell = newRow.insertCell(0);
+    document.getElementById('myview').style.display='none';
+    $('#Report').toggle();
+    $('#View').toggle();
 
-    
-    let newText = document.createTextNode(data);
-    newCell.appendChild(newText);
 }
-
 function removeUserEntry() {
     window.localStorage.removeItem("PersonNumber");
 }

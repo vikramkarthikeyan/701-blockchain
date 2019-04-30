@@ -41,7 +41,7 @@ module.exports = {
 
     },
 
-    addIncidentEntry: function(entry){
+    addIncidentEntry: function(entry, callback){
 
         MongoClient.connect(mongo_url, function(err, db) {
 

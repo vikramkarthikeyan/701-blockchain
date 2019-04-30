@@ -31,10 +31,21 @@ function Onsubmit(){
     entry.personNumber = parseInt(localStorage.getItem("PersonNumber"));
 
     var entrySuccessCallback = function (data) {
+
         console.log(data);
+
+        // Algorithm:
+        // Step 1: Convert mongo's ID field to a hex string using web3
+        // Step 2: convert that hex string to hex int 
+        // Step 3: Get previous hex string for the user
+        // Step 4: Add this hex int to the hex int of the user
+        // Step 5: Convert to hex string back and store. 
+        // web3.fromDecimal(parseInt(web3.fromAscii(data.objectId)) + parseInt(web3.fromAscii(data.objectId)))
+        calculateUserHash(data.objectId);
+
         setTimeout(function() {
             window.location = "/dashboard.html";    
-        }, 2500);
+        }, 2500000);
         $.toast({
             heading: 'Thank you',
             text: 'We appreciate.'
@@ -56,15 +67,15 @@ function Onsubmit(){
                 data: entry,
                 success: eligibilitySuccessCallback
     });
-
-
 }
-function Oncancel(){
+
+function Oncancel() {
     window.location='/dashboard.html';
 }
+
 function disableSubmit() {
     document.getElementById("submit").disabled = true;
-   }
+}
   
 function activateButton(element) {
   
@@ -75,4 +86,45 @@ function activateButton(element) {
           document.getElementById("submit").disabled = true;
         }
   
+}
+
+function calculateUserHash(currentHash) {
+
+    $.ajax({
+        type: "POST",
+        url: '/getUserHash',
+        data: {'personNumber': parseInt(localStorage.getItem("PersonNumber"))},
+        success: function(response) {
+            var previousHash = response.userHash._hex;
+
+            // parseInt(hex).toLocaleString('fullwide', { useGrouping: false })
+
+            var newHash = parseInt(currentHash, 16) + parseInt(currentHash, 16);
+            // newHash = newHash.toLocaleString('fullwide', { useGrouping: false })
+            newHash = newHash.toString(16)
+
+            console.log(previousHash, currentHash, newHash);
+            
+            updateUserHash(newHash);
+        },
+        error: function(error) {
+            alert('Failed to compute user hash!');
+        }
+    });
+
+}
+
+function updateUserHash(newHash) {
+    console.log("In update new hash:",newHash);
+    $.ajax({
+        type: "POST",
+        url: '/updateUserHash',
+        data: {'personNumber': parseInt(localStorage.getItem("PersonNumber")), 'hash': '0x' + newHash},
+        success: function(response) {
+            console.log("HASH UPDATED!");
+        },
+        error: function(error) {
+            alert('Failed to compute user hash!');
+        }
+    });
 }

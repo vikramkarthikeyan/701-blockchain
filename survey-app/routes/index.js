@@ -107,4 +107,23 @@ router.post('/banUser', function(req, res, next){
   });
 });
 
+router.post('/updateUserHash', function(req, res, next){
+  console.log(req.body);
+  blockchain.getUpdateUserHashABI(req.body.personNumber, req.body.hash, function(abi){
+    blockchain.signTransaction(abi, function(status){
+      res.sendStatus(status);
+    });
+  });
+});
+
+// API to get current user hash
+router.post('/getUserHash', function(req, res, next){
+  blockchain.getUserHash(req.body.personNumber, function(userHash, err){
+    if(!err)
+      res.send({"userHash": userHash});
+    else
+      res.sendStatus(500);
+  });
+});
+
 module.exports = router;

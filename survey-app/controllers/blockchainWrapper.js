@@ -2,6 +2,7 @@ var config = require('../config.json');
 var Web3 = require('web3');
 const Tx = require('ethereumjs-tx');
 
+
 var web3 = new Web3(new Web3.providers.HttpProvider(config.blockchain_endpoint));
 
 // Setup contract instance
@@ -55,6 +56,12 @@ module.exports = {
         callback(contractInstance.methods.banUser(personNumber).encodeABI());
     },
 
+    getUpdateUserHashABI: function(personNumber, hash, callback) {
+        console.log(hash);
+        console.log(web3.utils.fromAscii(hash));
+        callback(contractInstance.methods.updateUserHash(personNumber, web3.utils.fromAscii(hash)).encodeABI());
+    },
+
     getSurveyCount: function(callback) {
         contractInstance.methods.getSurveyCount().call().then(function(count){
             callback(count);
@@ -67,6 +74,25 @@ module.exports = {
         }).catch((error) => {
             callback(null, "Transaction Reverted");
         });
+    },
+
+    getUserHash: function(personNumber, callback) {
+        contractInstance.methods.getPoints(personNumber).call().then(function(points){
+            callback(points, null);
+        }).catch((error) => {
+            callback(null, "Transaction Reverted");
+        });
     }
 };
 
+function numStringToBytes32(num) { 
+    var bn = web3.utils.toBN(num);
+    return padToBytes32(bn.toString(16));
+ }
+
+ function padToBytes32(n) {
+    while (n.length < 64) {
+        n = "0" + n;
+    }
+    return "0x" + n;
+}

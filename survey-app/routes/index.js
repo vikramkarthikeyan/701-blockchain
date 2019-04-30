@@ -30,8 +30,9 @@ router.post('/getTotalRecords', function(req, res, next){
 
 // API to add an entry of the incident reported
 router.post('/addEntry', function(req, res, next){
-  mongo.addIncidentEntry(req.body);
-  res.sendStatus(200);
+  mongo.addIncidentEntry(req.body, function(objectId){
+    res.send({'objectId': objectId});
+  });
 });
 
 // API to add user entry status to blockchain

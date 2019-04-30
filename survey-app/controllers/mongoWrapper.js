@@ -48,6 +48,7 @@ module.exports = {
             var dbo = db.db("reporting");
         
             dbo.collection("entries").insertOne(entry, function(err, res) {
+              callback(res.insertedId);
               if (err) {
                 res.sendStatus(500);
                 throw err;

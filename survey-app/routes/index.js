@@ -138,7 +138,7 @@ router.post('/verifyUserEntries', function(req, res, next){
 function computeHash(response, callback) {
   var hash = "0x00";
   response.forEach(function(value){
-    var currentHash = value._id;
+    var currentHash = value.custom_id;
     hash =  parseInt(currentHash, 16) + parseInt(hash, 16);
     hash = hash.toString(16);
   });

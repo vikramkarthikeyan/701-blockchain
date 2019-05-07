@@ -89,7 +89,26 @@ function onView(){
         error: function(data) {
             alert('Data fetch failed....');
         }
-    });  
+    });
+    
+    $.ajax({
+            type:"POST",
+            url='/getPoints',
+            data:{"personNumber": localStorage.getItem("PersonNumber"), "points": userPoints},
+            success:function(data)
+            {
+                redeemPoints();
+            },
+            error:function(data)
+            {
+                alert('Not enough points to view data! Report incidents to view all events')
+                document.getElementById('Report').style.display='block';
+                document.getElementById('points').style.display='block';
+                document.getElementById('View').style.display='block';
+                document.getElementById('myview').style.display='none';
+            }
+
+    });
 }
 
 function goBack() {

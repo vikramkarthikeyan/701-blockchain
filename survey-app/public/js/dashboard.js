@@ -44,6 +44,29 @@ function redeemPoints() {
     }
 }
 
+function redeemView(){
+    if(userPoints==0){
+        alert("You have no points to View data! ")
+    }
+    else{
+        $.ajax({
+            type: "POST",
+            url:'/getPoints',
+            data:{"personNumber":localStorage.getItem("PersonNumber"), "points":userPoints},
+            success:function(data){
+                redeemPoints();
+                //userPoints=data.points;
+                
+            },
+            error:function(data){
+                alert('This user cannot View Incidents! Contact support@survey.buffalo.edu')
+            }
+            
+            
+        });
+    }
+}
+
 function ReportForm(){
     window.location="form.html";
 }
@@ -91,24 +114,6 @@ function onView(){
         }
     });
     
-    $.ajax({
-            type:"POST",
-            url='/getPoints',
-            data:{"personNumber": localStorage.getItem("PersonNumber"), "points": userPoints},
-            success:function(data)
-            {
-                redeemPoints();
-            },
-            error:function(data)
-            {
-                alert('Not enough points to view data! Report incidents to view all events')
-                document.getElementById('Report').style.display='block';
-                document.getElementById('points').style.display='block';
-                document.getElementById('View').style.display='block';
-                document.getElementById('myview').style.display='none';
-            }
-
-    });
 }
 
 function goBack() {

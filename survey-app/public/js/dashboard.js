@@ -44,27 +44,34 @@ function redeemPoints() {
     }
 }
 
+function redeemPoints(points) {
+
+    if(userPoints < points) {
+        alert("You have no points to redeem! Report events to earn points.")
+    } else {
+        $.ajax({
+            type: "POST",
+            url: '/redeemPoints',
+            data: { "personNumber": localStorage.getItem("PersonNumber"), "points": points },
+            success: function(data) {
+                console.log(data);
+                $('#viewModal').modal('hide');
+                onView();
+            },
+            error: function(data) {
+                alert('This user cannot redeem points! Contact support@survey.buffalo.edu')
+            }
+        });
+    }
+}
+
 function redeemView(){
-    if(userPoints==0){
+    if(userPoints < 5){
         alert("You have no points to View data!")
     }
     else{
-        $.ajax({
-            type: "POST",
-            url:'/getPoints',
-            data:{"personNumber":localStorage.getItem("PersonNumber"), "points":userPoints},
-            success:function(data){
-                redeemPoints();
-                onView();
-                //userPoints=data.points;
-                
-            },
-            error:function(data){
-                alert('This user cannot View Incidents! Contact support@survey.buffalo.edu')
-            }
-            
-            
-        });
+        redeemPoints(5);
+        // onView();
     }
 }
 

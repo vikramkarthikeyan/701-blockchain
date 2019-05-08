@@ -1,5 +1,5 @@
 {
-    "contract_address": "0x7AfB1b1164b4a6bF15363FDc35E18A86fA3C985c",
+    "contract_address": "0x779AA4D69bDB48dcd0bfbC2979eDa5a5E862bA6C",
     "private_key": "ec52f4ae7eddc3e4431fdcfe5df0bf23174b936872d319315af27b992fd782b8",
     "primary_account": "0x2CcC44895b058a88e671C07b98e52f820561e5e6",
     "mongo_endpoint": "mongodb://localhost:27017/",

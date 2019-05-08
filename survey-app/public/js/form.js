@@ -45,7 +45,7 @@ function Onsubmit(){
 
         setTimeout(function() {
             window.location = "/dashboard.html";    
-        }, 2500000);
+        }, 2500);
         $.toast({
             heading: 'Thank you',
             text: 'We appreciate.'
